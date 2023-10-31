@@ -82,6 +82,7 @@
     function formatter(value, settings) {
       return value.toFixed(settings.decimals);
     }
+    
   })(jQuery);
   
   jQuery(function ($) {
@@ -89,7 +90,7 @@
     $(".count-number").data("countToOptions", {
       formatter: function (value, options) {
         return value
-          .toFixed(options.decimals)
+          .toFixed(options.decimals) + "+"
           .replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
       }
     });

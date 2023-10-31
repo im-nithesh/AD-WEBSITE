@@ -865,9 +865,9 @@ Counter 1 Style
 --------------------------------------------- 
 */
 
-.counter-1 {
+.counter {
   text-align: center;
-  border: 1px solid #00bfff;
+  border: 2px solid #00bfff;
   border-radius: 10px;
   margin: 75px -1px 0px 0px;
   padding: 0px 0px 40px;
@@ -878,7 +878,7 @@ Counter 1 Style
   width: 100%;
 }
 
-.counter-1 .counter-icon-holder {
+.counter .counter-icon-holder {
   width: 140px;
   height: 80px;
   display: inline-block;
@@ -887,7 +887,7 @@ Counter 1 Style
   background: #ffffff;
 }
 
-.counter-1 h4 {
+.counter h4 {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -899,7 +899,7 @@ Counter 1 Style
   color: #1e1e1e;
 }
 
-.counter-1 h4:before, .counter-1 .counter-icon-holder:before {
+.counter h4:before, .counter .counter-icon-holder:before {
   content: "";
   position: absolute;
   margin: auto;
@@ -910,9 +910,9 @@ Counter 1 Style
   z-index: 1;
 }
 
-.counter-1 .counter-icon-holder:before {
+.counter .counter-icon-holder:before {
   background: #ffffff;
-  border: 1px solid #00bfff;
+  border: 2px solid #00bfff;
   left: 0px;
   right: 0px;
   top: -45px;
@@ -923,20 +923,20 @@ Counter 1 Style
   transition: all 0.3s linear;
 }
 
-.counter-1 h4:before {
-  right: -6px;
-  top: 6px;
+.counter h4:before {
+  right: -7px;
+  top: 3px;
   width: 12px;
   height: 12px;
   background-color: #00bfff;
 }
 
-.counter-1:hover .counter-icon-holder:before{
+.counter:hover .counter-icon-holder:before{
   border-color: #00bfff;
   background-color: #00bfff;
 }
 
-.counter-1 .counter-icon-holder .icon-wrapper {
+.counter .counter-icon-holder .icon-wrapper {
   position: absolute;
   font-size: 20px;
   z-index: 1;
@@ -946,7 +946,11 @@ Counter 1 Style
   margin: auto;
 }
 
-.counter-1 .count-number {
+.counter .counter-icon-holder i{
+  font-size: 25px;
+}
+
+.counter .count-number {
   font-size: 26px;
   font-weight: bold;
   position: relative;
@@ -955,62 +959,8 @@ Counter 1 Style
   color: #1e1e1e;
 }
 
-.counter-1:hover .count-number, .counter-1:hover .icon-wrapper i {
+.counter:hover .count-number, .counter:hover .icon-wrapper i {
   color: #fff;
-}
-
-/* 
----------------------------------------------
-Fun Facts Style
---------------------------------------------- 
-*/
-
-.fun-facts {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.fun-facts .counter {
-  background-color: #eafbd0;
-  position: relative;
-  border-radius: 10px;
-  width: 270px;
-  padding: 20px 0px;
-  display: inline-block;
-}
-
-.fun-facts .counter h2,
-.fun-facts .counter p {
-  display: inline-flex;
-  vertical-align: middle;
-}
-
-.fun-facts .counter p {
-  text-align: left;
-  font-size: 16px;
-  color: #1e1e1e;
-  font-weight: 600;
-  line-height: 28px;
-}
-
-.fun-facts .counter h2 {
-  margin-right: 25px;
-  font-size: 40px;
-  color: #55850c;
-}
-
-.fun-facts .counter i{
-  font-size: 30px;
-  position: absolute;
-  right: -25px;
-  top: -25px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #55850c;
-  color: #ffffff;
-  line-height: 50px;
 }
 
 
