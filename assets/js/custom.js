@@ -1,7 +1,7 @@
 (function ($) {
 	
 	"use strict";
-
+	
 	// Page loading animation
 	$(window).on('load', function() {
 
@@ -10,14 +10,9 @@
     });
 
 
+	// Navbar Animation
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
-	//   var box = $('.header-text').height();
-	//   var header = $('header').height();
-	//   console.log(box);
-	//   console.log(header);
-	//   console.log(box-header);
-	// if (scroll1 >= box - header)
 	  if (scroll >= 510) {
 	    $("header").addClass("background-header");
 	  } else {
@@ -25,14 +20,15 @@
 	  }
 	})
 
+
+	// Main Banner Carousel
 	$('.owl-banner').owlCarousel({
 	  center: true,
 	  autoplay: true,
       items:1,
       loop:true,
       dots:true,
-	  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-      margin:30,
+	  margin:30,
       responsive:{
         992:{
             items:1
@@ -41,6 +37,44 @@
 			items:1
 		}
       }
+	});
+
+
+	//Popup Menu Controls
+	$(".item.Everwin").on('click', function() {	
+		$('.popup-item.Everwin').addClass('active');
+	});
+
+	$(".popup-item .close-button").on('click', function() {	
+		$('.popup-item').removeClass('active');
+	});
+
+	setTimeout (function () {
+		$('.popup-request').addClass('active');
+	  }, 10000);
+
+	$(".popup-request .close-button").on('click', function() {	
+		$('.popup-request').removeClass('active');
+	});
+
+	// Popup item Carousel
+	$('.owl-popup').owlCarousel({
+		center: true,
+		autoplay: true,
+		autoplayTimeout: 2000,
+		items:1,
+		loop:true,
+		nav:true,
+		navText: ['<i class="fa-solid fa-angle-left" aria-hidden="true"></i>','<i class="fa-solid fa-angle-right" aria-hidden="true"></i>'],
+		margin:30,
+		responsive:{
+		  992:{
+			  items:1
+		  },
+		  1200:{
+			  items:1
+		  }
+		}
 	});
 
 	var width = $(window).width();
@@ -53,30 +87,7 @@
 		}
 	})
 
-	const elem = document.querySelector('.properties-box');
-	const filtersElem = document.querySelector('.properties-filter');
-	if (elem) {
-		const rdn_events_list = new Isotope(elem, {
-			itemSelector: '.properties-items',
-			layoutMode: 'masonry'
-		});
-		if (filtersElem) {
-			filtersElem.addEventListener('click', function(event) {
-				if (!matchesSelector(event.target, 'a')) {
-					return;
-				}
-				const filterValue = event.target.getAttribute('data-filter');
-				rdn_events_list.arrange({
-					filter: filterValue
-				});
-				filtersElem.querySelector('.is_active').classList.remove('is_active');
-				event.target.classList.add('is_active');
-				event.preventDefault();
-			});
-		}
-	}
-
-
+	
 	// Menu Dropdown Toggle
 	if($('.menu-trigger').length){
 		$(".menu-trigger").on('click', function() {	
