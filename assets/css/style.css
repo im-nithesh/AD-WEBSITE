@@ -430,8 +430,8 @@ Header Style
 
 }
 .header-area .main-nav img {
-  width: 270px;
-  height: 90px;
+  width: 300px;
+  height: 100px;
   text-align: center;
 }
 
@@ -753,7 +753,7 @@ Banner Style
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 20% 100px 20%;
+  padding: 100px 30% 100px 10%;
   margin-top: 0px;
 }
 
@@ -805,7 +805,7 @@ Banner Style
 .main-banner .owl-dots {
   position: absolute;
   bottom: 60px;
-  left: 20%;
+  left: 10%;
 }
 
 .main-banner .owl-dots .owl-dot {
@@ -1421,7 +1421,7 @@ Contact Style
 .contact-content .item {
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  padding: 35px 30px;
+  padding: 35px 20px;
   background-color: #fff;
   transition: all 0.36s ease-in-out;
 }
@@ -1431,21 +1431,21 @@ Contact Style
 }
 
 .contact-content .phone {
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 .contact-content .email {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .contact-content .item img {
   float: left;
-  margin-right: 25px;
+  margin-right: 20px;
   vertical-align: middle;
 }
 
 .contact-content .item h6 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   vertical-align: middle;
 }
