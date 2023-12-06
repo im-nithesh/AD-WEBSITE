@@ -39,6 +39,16 @@
       }
 	});
 
+	
+	$(".team-slider").owlCarousel({
+		loop: true,
+		autoplay: true,
+		items:4,
+		autoplayTimeout: 2000, //2000ms = 2s;
+		autoplayHoverPause: true,
+	});
+      
+
 
 	//Popup Menu Controls
 	$(".item.Everwin").on('click', function() {	
