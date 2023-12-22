@@ -1196,6 +1196,7 @@ Team Style
   border: none;
   border-radius: 0;
   box-shadow: 8px -8px 5px -4px #00bfff;
+  
 }
 .team-slider .even-card{
   margin-top: 10px;
@@ -1203,6 +1204,7 @@ Team Style
 .team-slider .card .img{
   height: 300px;
   width: 100%;
+  
 }
 .team-slider .card .img img{
   height: 100%;
@@ -1210,12 +1212,22 @@ Team Style
   object-fit: cover;
   filter: grayscale(100%);
 }
+
+.team-slider .card .content-bg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(252,255,250,0.7) 50%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
 .team-slider .card .content{
   position: absolute;
   left: -15px;
   bottom: -47px;
   padding: 0px;
-  z-index: 2;
+  z-index: 3;
 }
 .team-slider .card .content .title{
   font-family: 'Cardo', serif;
@@ -1246,7 +1258,7 @@ Team Style
   height: 100%;
   transition: .5s ease;
   border: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 .team-slider .card:hover .overlay {
@@ -1461,7 +1473,7 @@ Quotation Style
 
 .search-form {
   margin-top: 100px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .search-form #search-form {
@@ -1525,7 +1537,7 @@ Contact Style
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  padding: 100px 0px 250px 0px;
+  padding: 250px 0px 0px 0px;
   position: relative;
 }
 
@@ -1538,7 +1550,7 @@ Contact Style
 } */
 
 .contact-content {
-  margin-top: -240px;
+  /* margin-top: -240px; */
   position: relative;
   z-index: 1;
 }
