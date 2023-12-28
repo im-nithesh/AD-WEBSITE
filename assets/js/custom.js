@@ -11,15 +11,13 @@
 
 
 	// Navbar Animation
-	$(window).scroll(function() {
-	  var scroll = $(window).scrollTop();
-	  if (scroll >= 510) {
-	    $("header").addClass("background-header");
+	window.onscroll = function() {
+		if (window.scrollY > window.innerHeight * 0.9) {
+			$("header").addClass("background-header");
 	  } else {
-	    $("header").removeClass("background-header");
+	    	$("header").removeClass("background-header");
 	  }
-	})
-
+	}
 
 	// Main Banner Carousel
 	$('.owl-banner').owlCarousel({
@@ -59,13 +57,16 @@
 		$('.popup-item').removeClass('active');
 	});
 
+
+	//Popup Form Controls
 	setTimeout (function () {
 		$('.popup-request').addClass('active');
-	  }, 10000);
+	  }, 15000);
 
 	$(".popup-request .close-button").on('click', function() {	
 		$('.popup-request').removeClass('active');
 	});
+
 
 	// Popup item Carousel
 	$('.owl-popup').owlCarousel({
@@ -119,12 +120,27 @@
 					$('.header-area .nav').slideUp(200);	
 				}				
 				$('html,body').animate({
-					scrollTop: (target.offset().top) - 80
+					scrollTop: (target.offset().top) - 100
 				}, 700);
 				return false;
 			}
 		}
 	});
+
+	// //scrollTO
+	// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	// 	anchor.addEventListener('click', function (e) {
+	// 		e.preventDefault();
+	
+	// 		const target = document.querySelector(this.getAttribute('href'));
+	// 		const targetTop = target.getBoundingClientRect().top + window.scrollY - 100;
+	
+	// 		window.scrollTo({
+	// 			top: targetTop,
+	// 			behavior: 'smooth'
+	// 		});
+	// 	});
+	// });
 
 
 	// Page loading animation
