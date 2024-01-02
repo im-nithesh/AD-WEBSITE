@@ -146,8 +146,10 @@
               </div>   
 
               <div class="tab-content" id="myTabContent">
+                
                 <div class="tab-pane fade show active" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
                   <div class="row">
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item Everwin">
                         <div class="property-image">
@@ -161,6 +163,7 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
@@ -174,12 +177,13 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-o-03.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-o-03.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Jaykumar<br>VGN Brent Park, Ambattur</h4>
                         <ul>
                           <li>Area: <span>225 m<sup>2</sup></span></li>
@@ -187,17 +191,25 @@
                         </ul>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
                 <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
                   <div class="row">
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
+                          <div class="flip-card front" id="front">
                             <img src="assets/images/property-c-01.png" alt="">
-                            <span class="category">Residence</span>
+                            <span class="category" id="front-button">Residence</span>
                           </div>
+                          <div class="flip-card back" id="back">
+                            <img src="assets/images/property-c-02.png" alt="">
+                            <span class="category" id="back-button">x</span>
+                          </div>
+                        </div>
                         <h4>Vijay Villa<br>VGN Brent Park, Ambattur</h4>
                         <ul>
                           <li>Area: <span>545 m<sup>2</sup></span></li>
@@ -205,12 +217,13 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-c-02.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-c-02.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Edward Joseph<br>Sameera Homes, Poonammali</h4>
                         <ul>
                           <li>Area: <span>450 m<sup>2</sup></span></li>
@@ -218,12 +231,13 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-c-03.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-c-03.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Sumathi Illam<br>Sameera Homes, Poonammali</h4>
                         <ul>
                           <li>Area: <span>225 m<sup>2</sup></span></li>
@@ -231,6 +245,7 @@
                         </ul>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -348,9 +363,21 @@
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/click-scroll.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    $("front-button").on('click', function() {
+      console.log("1");
+      $('front').addClass('FrontToBack');
+      $('back').addClass('BackToFront');
+    });
+  
+    $("back-button").on('click', function() {	
+      $('front').removeClass('FrontToBack');
+      $('back').removeClass('BackToFront');
+    });
+  
+  </script>
 
   </body>
 </html>

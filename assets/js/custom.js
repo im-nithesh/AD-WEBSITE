@@ -49,6 +49,19 @@
       }
 	});
 
+	// Works Flip Card
+
+	$("front-button").on('click', function() {
+		console.log("1");
+		$('front').addClass('FrontToBack');
+		$('back').addClass('BackToFront');
+	});
+
+	$("back-button").on('click', function() {	
+		$('front').removeClass('FrontToBack');
+		$('back').removeClass('BackToFront');
+	});
+
 	// Team Slider Carousel
 	$(".team-slider").owlCarousel({
 		loop: true,
@@ -88,8 +101,6 @@
 		$('.popup-item').removeClass('active');
 		enableScroll();
 	});
-
-	
 
 
 	//Popup Form Controls
