@@ -8,6 +8,8 @@
         $('#js-preloader').addClass('loaded');
     });
 
+	AOS.init();
+	
 	// //Smooth-Scroll
 	// let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
 

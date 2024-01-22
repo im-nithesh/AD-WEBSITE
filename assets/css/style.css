@@ -1156,7 +1156,7 @@ Team Style
   right: -4px;
   bottom: 0;
   padding: 10px;
-  background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(252,255,250,0.7) 50%, rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(252,255,250,0.75) 50%, rgba(255,255,255,0) 100%);
   z-index: 2;
 }
 .team-slider .card .content{
@@ -1552,6 +1552,7 @@ Contact Style
   background-position: top center;
   padding: 250px 0px 0px 0px;
   position: relative;
+  z-index: -2;
 }
 
 .contact.section {
@@ -1703,54 +1704,34 @@ footer .location-widget p br{
   content: " ";
 }
 
-footer ul.info li {
+footer ul li {
   display: block;
   margin-bottom: 20px;
 }
 
-footer ul.info li a {
+footer ul li a {
   font-size: 15px;
   color: #7a7a7a;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-footer ul.info li a:hover {
+footer ul li a:hover {
   color: #00bfff;
 }
 
-footer ul.info li:last-child {
-  margin-bottom: 0px;
-}
-
-footer ul.social-links li {
-  display: block;
-  margin-bottom: 20px;
-}
-
-footer ul.social-links li a {
-  font-size: 15px;
-  color: #7a7a7a;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-footer ul.social-links li a i {
+footer ul li a i{
   margin-right: 5px;
 }
 
-footer ul.social-links li a:hover {
-  color: #00bfff;
-}
-
-footer ul.social-links li:last-child {
+footer ul li:last-child {
   margin-bottom: 0px;
 }
 
 .sub-footer {
   margin-top: 60px;
   background-color: #2b2b2b;
-  padding: 10px 35px;
+  padding: 15px 35px;
   text-align: center;
 }
 
