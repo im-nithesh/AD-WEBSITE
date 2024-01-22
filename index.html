@@ -36,54 +36,23 @@
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Form Popup Start ***** -->
-
-  <div class="popup-request">
-    <div class="wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row popup-area">
-              <div class="col-lg-6">
-                <img src="assets/images/experience.png" alt="">
-              </div>
-              <div class="col-lg-6">
-                <h4>Request a Call Back Now!</h4>
-                
-                <form id="contact-form" action="" method="post">
-                  <fieldset>
-                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                  </fieldset>
-                  
-                  <fieldset>
-                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                  </fieldset>
-                  
-                  <fieldset>
-                    <input type="number" name="number" id="number" placeholder="Your Mobile Number..." required="" >
-                  </fieldset>
-                  
-                  <fieldset>
-                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                  </fieldset>
-                  
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Request Call Back</button>
-                  </fieldset>
-                </form>
-              </div>
-              <button class="close-button">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   
-  <!-- ***** Form Popup End ***** -->
+  <!-- ***** Widgets Start ***** -->
+
+  <a href="https://wa.me/+919962693583" target="_blank">
+    <div class="wa-widget">
+        <div class="wa-number">
+          <strong>99626&nbsp;93583</strong>
+        </div>
+        <div class="icon-only">
+          <i class="fa-brands fa-whatsapp fa-lg"></i> 
+        </div>
+    </div>
+  </a>
+
+  <!-- ***** Widgets End ***** -->
+
+  <!-- ***** Main Banner Start ***** -->
 
   <div class="main-banner" id="section_1">
     <div class="owl-carousel owl-banner">
@@ -120,6 +89,8 @@
     </div>
   </div>
 
+  <!-- ***** Main Banner End ***** -->
+
   <!-- ***** Header Area Start ***** -->
   <header class="main header-area">
     <div class="container">
@@ -138,7 +109,6 @@
               <li class="nav-link"><a href="#section_3" class="click-scroll">Our Works</a></li>
               <li class="nav-link"><a href="#section_4" class="click-scroll">Our Team</a></li>
               <li class="nav-link"><a href="#section_5" class="click-scroll">Contact Us</a></li>
-              <li><a href="https://wa.me/+919962693583"><i class="fa-brands fa-whatsapp fa-lg"></i> 99626 93583</a></li>
             </ul>   
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -352,7 +322,7 @@
                       <div class="item">
                         <div class="property-image">
                           <img src="assets/images/property-o-02.png" alt="">
-                          <span class="category">Residence</span>
+                          <span class="category">Commercial</span>
                         </div>
                         <h4>Sujith Reddy<br>VGN Brent Park, Ambattur</h4>
                         <ul>
@@ -585,7 +555,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <form id="search-form" name="gs" method="submit" role="search" action="#">
+          <form id="quote-search-form" name="gs" role="search">
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading text-center">
@@ -595,52 +565,82 @@
               <div class="col-lg-4">
                 <fieldset>
                   <!-- <label for="searchTitle" class="form-label">Search Work by Title</label> -->
-                  <input type="text" name="searchTitle" class="searchText" placeholder="Enter total built up area in Sqft..." autocomplete="on" required>
+                  <input name="sq-ft" type="number" class="searchText" placeholder="Enter total built up area in Sqft..." autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-4">
                 <fieldset>
-                  <!-- <label for="chooseCategory" class="form-label">Choose Category</label> -->
-                  <select name="Category" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                    <option selected>Choose category</option>
-                    <option type="checkbox" name="option1" value="Residential">Residential</option>
-                    <option value="Commercial">Commercial</option>
-                    <option value="School">School</option>
-                    <!-- <option value="Trendy Design">Trendy Design</option> -->
+                  <select name="category" class="form-select" aria-label="Select Category" required>
+                    <option name="defaultOption" value="" disabled selected>Choose category</option>
+                    <option name="option1" value="1">Residential</option>
+                    <option name="option2" value="2">Commercial</option>
+                    <option name="option3" value="3">School</option>
                   </select>
                 </fieldset>
               </div>
-              <!-- <div class="col-lg-3">
-                <fieldset>
-                  <label for="chooseprice" class="form-label">Price Range</label>
-                  <select name="Price" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                    <option selected>Choose price</option>
-                    <option value="$100 - $250">$100 - $250</option>
-                    <option value="$250 - $500">$250 - $500</option>
-                    <option value="$500 - $1000">$500 - $1000</option>
-                    <option value="$1000+">$1000+</option>
-                  </select>
-                </fieldset>
-              </div> -->
               <div class="col-lg-4">
                 <fieldset>
-                  <!-- <label for="chooseplan" class="form-label">Pick a Plan</label> -->
-                  <select name="Plan" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                    <option selected>Choose plan</option>
-                    <option value="Standard">Standard</option>
-                    <!-- <option value="Professional">Professional</option> -->
-                    <option value="Golden">Golden</option>
-                    <option value="Premium">Premium</option>
+                  <select name="plan" class="form-select" aria-label="Select Plan" required>
+                    <option name="defaultOption" value="" disabled selected>Choose plan</option>
+                    <option name="option3" value="4">Standard</option>
+                    <option name="option4" value="5">Premium</option>
                   </select>
                 </fieldset>
               </div>
               <div class="col-lg-12">                        
                 <fieldset>
-                  <button class="main-button">Search Now</button>
+                  <button type="submit" class="main-button">Search Now</button>
                 </fieldset>
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-quote">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="row popup-area">
+              <div class="col-lg-6">
+                <div class="quote">
+                  <img src="assets/images/quote.png" alt="">
+                  <div class="amount count-amount"></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h5>Get Started on your Dream Project!</h5>
+                
+                <form id="contact-form" action="" method="post">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="number" name="number" id="number" placeholder="Your Contact Number..." required="" >
+                  </fieldset>
+                  
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Request a Call Back</button>
+                  </fieldset>
+                </form>
+              </div>
+              <button class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -702,14 +702,14 @@
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
+                  <label for="number">Contact Number</label>
+                  <input type="number" name="number" id="number" placeholder="Your Contact Number..." autocomplete="on" >
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  <textarea name="message" id="message" placeholder="Your Message..."></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -723,6 +723,54 @@
       </div>
     </div>
   </div>
+
+  <!-- ***** Form Popup Start ***** -->
+
+  <div class="popup-request">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row popup-area">
+              <div class="col-lg-6">
+                <img src="assets/images/experience.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <h4>Request a Call Back Now!</h4>
+                
+                <form id="contact-form" action="" method="post">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="number" name="number" id="number" placeholder="Your Contact Number..." required="" >
+                  </fieldset>
+                  
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Request Call Back</button>
+                  </fieldset>
+                </form>
+              </div>
+              <button class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ***** Form Popup End ***** -->
 
   <!-- ***** Footer Start ***** -->
   <footer>

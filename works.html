@@ -151,7 +151,7 @@
                   <div class="row">
 
                     <div class="col-lg-4 col-md-6">
-                      <div class="item Everwin">
+                      <div class="item" id="everwin">
                         <div class="property-image">
                           <img src="assets/images/property-o-01.png" alt="">
                           <span class="category">Institution</span>
@@ -201,13 +201,15 @@
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                          <div class="flip-card front" id="front">
+                          <div class="flip-card front">
                             <img src="assets/images/property-c-01.png" alt="">
-                            <span class="category" id="front-button">Residence</span>
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-camera flip-btn"></i>
                           </div>
-                          <div class="flip-card back" id="back">
+                          <div class="flip-card back">
                             <img src="assets/images/property-c-02.png" alt="">
-                            <span class="category" id="back-button">x</span>
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-eye flip-btn"></i>
                           </div>
                         </div>
                         <h4>Vijay Villa<br>VGN Brent Park, Ambattur</h4>
@@ -221,8 +223,16 @@
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                          <img src="assets/images/property-c-02.png" alt="">
-                          <span class="category">Residence</span>
+                          <div class="flip-card front">
+                            <img src="assets/images/property-c-02.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-camera flip-btn"></i>
+                          </div>
+                          <div class="flip-card back">
+                            <img src="assets/images/property-c-03.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-eye flip-btn"></i>
+                          </div>
                         </div>
                         <h4>Edward Joseph<br>Sameera Homes, Poonammali</h4>
                         <ul>
@@ -235,8 +245,16 @@
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                          <img src="assets/images/property-c-03.png" alt="">
-                          <span class="category">Residence</span>
+                          <div class="flip-card front">
+                            <img src="assets/images/property-c-03.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-camera flip-btn"></i>
+                          </div>
+                          <div class="flip-card back">
+                            <img src="assets/images/property-c-01.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-eye flip-btn"></i>
+                          </div>
                         </div>
                         <h4>Sumathi Illam<br>Sameera Homes, Poonammali</h4>
                         <ul>
@@ -256,7 +274,7 @@
     </div>
   </section>
   
-  <div class="popup-item Everwin">
+  <div class="popup-works" id="everwin-popup">
     <div class="wrapper">
       <div class="container">
         <div class="row">
@@ -364,20 +382,7 @@
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/custom.js"></script>
-
-  <script>
-    $("front-button").on('click', function() {
-      console.log("1");
-      $('front').addClass('FrontToBack');
-      $('back').addClass('BackToFront');
-    });
-  
-    $("back-button").on('click', function() {	
-      $('front').removeClass('FrontToBack');
-      $('back').removeClass('BackToFront');
-    });
-  
-  </script>
+  <script src="assets/js/work-custom.js"></script>
 
   </body>
 </html>

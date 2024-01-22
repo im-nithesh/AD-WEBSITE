@@ -98,7 +98,6 @@
           formatter: function (value, options) {
             return value
               .toFixed(options.decimals) + "+"
-              .replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
           }
         });
       
@@ -110,6 +109,39 @@
           options = $.extend({}, options || {}, $this.data("countToOptions") || {});
           $this.countTo(options);
         }
+      });
+    }
+  });
+
+  // Popup Quote Timer
+  
+  var form = document.getElementById('quote-search-form');
+  var popupQuote = document.querySelector('.popup-quote');
+  
+  // Start Counter after Submiting Form
+  form.addEventListener('submit', () => {
+    if (popupQuote.classList.contains('active')) {
+
+      jQuery(function ($) {
+        // start all the timers
+        $(".count-amount").each(count);
+        function count(options) {
+          var $this = $(this);
+          options = $.extend({}, options || {}, $this.data("countToOptions") || {});
+          $this.countTo(options);
+        }
+
+        // custom formatting
+        $('.count-amount').countTo({
+          from: 0,
+          to: window.price,
+          speed: 2000,
+          formatter: function (value, options) {
+            return value
+              .toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ",") + "&nbsp;INR";
+          }
+        });
+
       });
     }
   });
