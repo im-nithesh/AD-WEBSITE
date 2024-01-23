@@ -10,16 +10,15 @@
     <title>AD Constructions | Perfection is our Commitment</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" >
+    
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/vendor/owl/owl.css">
+    <link rel="stylesheet" href="/vendor/aos/aos.css">
 
+    <!-- Custom core CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
 
 <body>
@@ -146,10 +145,12 @@
               </div>   
 
               <div class="tab-content" id="myTabContent">
+                
                 <div class="tab-pane fade show active" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
                   <div class="row">
+
                     <div class="col-lg-4 col-md-6">
-                      <div class="item Everwin">
+                      <div class="item" id="everwin">
                         <div class="property-image">
                           <img src="assets/images/property-o-01.png" alt="">
                           <span class="category">Institution</span>
@@ -161,6 +162,7 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
@@ -174,12 +176,13 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-o-03.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-o-03.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Jaykumar<br>VGN Brent Park, Ambattur</h4>
                         <ul>
                           <li>Area: <span>225 m<sup>2</sup></span></li>
@@ -187,17 +190,27 @@
                         </ul>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
                 <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
                   <div class="row">
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
+                          <div class="flip-card front">
                             <img src="assets/images/property-c-01.png" alt="">
                             <span class="category">Residence</span>
+                            <i class="fa-solid fa-camera flip-btn"></i>
                           </div>
+                          <div class="flip-card back">
+                            <img src="assets/images/property-c-02.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-eye flip-btn"></i>
+                          </div>
+                        </div>
                         <h4>Vijay Villa<br>VGN Brent Park, Ambattur</h4>
                         <ul>
                           <li>Area: <span>545 m<sup>2</sup></span></li>
@@ -205,12 +218,21 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
+                          <div class="flip-card front">
                             <img src="assets/images/property-c-02.png" alt="">
                             <span class="category">Residence</span>
+                            <i class="fa-solid fa-camera flip-btn"></i>
                           </div>
+                          <div class="flip-card back">
+                            <img src="assets/images/property-c-03.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-eye flip-btn"></i>
+                          </div>
+                        </div>
                         <h4>Edward Joseph<br>Sameera Homes, Poonammali</h4>
                         <ul>
                           <li>Area: <span>450 m<sup>2</sup></span></li>
@@ -218,12 +240,21 @@
                         </ul>
                       </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6">
                       <div class="item">
                         <div class="property-image">
+                          <div class="flip-card front">
                             <img src="assets/images/property-c-03.png" alt="">
                             <span class="category">Residence</span>
+                            <i class="fa-solid fa-camera flip-btn"></i>
                           </div>
+                          <div class="flip-card back">
+                            <img src="assets/images/property-c-01.png" alt="">
+                            <span class="category">Residence</span>
+                            <i class="fa-solid fa-eye flip-btn"></i>
+                          </div>
+                        </div>
                         <h4>Sumathi Illam<br>Sameera Homes, Poonammali</h4>
                         <ul>
                           <li>Area: <span>225 m<sup>2</sup></span></li>
@@ -231,6 +262,7 @@
                         </ul>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -241,7 +273,7 @@
     </div>
   </section>
   
-  <div class="popup-item Everwin">
+  <div class="popup-works" id="everwin-popup">
     <div class="wrapper">
       <div class="container">
         <div class="row">
@@ -344,13 +376,13 @@
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/click-scroll.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/js/isotope.min.js"></script>
+  <script src="/vendor/owl/owl-carousel.js"></script>
+  <script src="/vendor/aos/aos.js"></script>
+  <script src="/assets/js/custom.js"></script>
+  <script src="/assets/js/work-custom.js"></script>
 
   </body>
 </html>

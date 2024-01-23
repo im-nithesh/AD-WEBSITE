@@ -6,9 +6,61 @@
 	$(window).on('load', function() {
 
         $('#js-preloader').addClass('loaded');
-
     });
 
+	AOS.init();
+	
+	//Smooth-Scroll
+	let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
+
+	// With this attempt I tried to make the scroll by mouse wheel look smooth
+	let delay = ms => new Promise(res => setTimeout(res, ms));
+	let dy = 0;
+	window.addEventListener("wheel", async e => {
+		// Prevent the default way to scroll the page
+		e.preventDefault();
+
+		dy += e.deltaY;
+		let _dy = dy; // Store the value of "dy"
+		await delay(50); // Wait for .05s
+
+		// If the value hasn't changed during the delay, then scroll to "start + dy"
+		if (_dy === dy) {
+			let start = window.scrollY || window.pageYOffset;
+			customScrollTo(start + dy, 600, easeInOutQuint);
+			dy = 0;
+		}
+	}, { passive: false });
+
+	function customScrollTo(to, duration, easingFunction) {
+		let start = window.scrollY || window.pageYOffset;
+		let time = Date.now();
+		let timeElapsed = 0;
+		let speed = (to - start) / duration;
+		
+		(function move() {
+			if (timeElapsed > duration) {
+				return;
+			}
+			timeElapsed = Date.now() - time;
+
+			// Get the displacement of "y"
+			let dy = speed * timeElapsed;
+			let y = start + dy;
+
+			// Map "y" into a range from 0 to 1
+			let _y = (y - start) / (to - start);
+			// Fit "_y" into a curve given by "easingFunction"
+			_y = easingFunction(_y);
+			// Expand "_y" into the original range
+			y = start + (to - start) * _y;
+
+			window.scrollTo(0, y);
+			window.requestAnimationFrame(move);
+		})();
+	}
+
+	
 	//Scroll-Lock
 	// Disable scrolling when popup is displayed
 	function disableScroll() {
@@ -56,56 +108,75 @@
 		items:4,
 		autoplayTimeout: 2000, //2000ms = 2s;
 		autoplayHoverPause: true,
+		responsive:{
+			320:{
+				items:1
+			},
+			760:{
+				items:2
+			},
+			1200:{
+				items:4
+			}
+		  }
 	});
       
-	// Popup item Carousel
-	$('.owl-popup').owlCarousel({
-		center: true,
-		autoplay: true,
-		autoplayTimeout: 2000,
-		items:1,
-		loop:true,
-		nav:true,
-		navText: ['<i class="fa-solid fa-angle-left" aria-hidden="true"></i>','<i class="fa-solid fa-angle-right" aria-hidden="true"></i>'],
-		margin:30,
-		responsive:{
-		  992:{
-			  items:1
-		  },
-		  1200:{
-			  items:1
-		  }
-		}
-	});
-
-	//Popup Menu Controls
-	$(".item.Everwin").on('click', function() {	
-		$('.popup-item.Everwin').addClass('active');
-		disableScroll();
-	});
-
-	$(".popup-item .close-button").on('click', function() {	
-		$('.popup-item').removeClass('active');
-		enableScroll();
-	});
-
-	
-
-
 	//Popup Form Controls
-	setTimeout (function () {
-		$('.popup-request').addClass('active');
-		disableScroll();
-	  }, 15000);
-
+	if (window.matchMedia('(min-width: 1200px)').matches) {
+		setTimeout (function () {
+			$('.popup-request').addClass('active');
+			disableScroll();
+		}, 15000);
+	}
 	$(".popup-request .close-button").on('click', function() {	
 		$('.popup-request').removeClass('active');
 		enableScroll();
 	});
 
 
+	//Quote Popoup Controls
+	
+	var form = document.getElementById('quote-search-form');
+	var popupQuote = document.querySelector('.popup-quote');
+	var sqft = document.querySelector('#quote-search-form input[type="number"]');
+	var category = document.querySelector('#quote-search-form select[name="category"]');
+	var plan = document.querySelector('#quote-search-form select[name="plan"]');
+	var premium = plan.querySelector('option[value="5"]');
+	window.price = 0;
+
+	//disabling premium option
+	category.addEventListener('change', function() {
+		var value = this.value;
+		if (value == "2" || value == "3") {
+			premium.disabled = true;
+		} else {
+			premium.disabled = false;
+		}
+
+		plan.selectedIndex = 1;
+	});
+
+	// Code to display the popup and Price
+	form.addEventListener('submit', e => {
+		e.preventDefault();
+		let sqftValue = sqft.value;
+		let categoryValue = category.value;
+		let planValue = plan.value;
+		
+		window.price = categoryValue == "1" ? (planValue == "4" ? sqftValue*2500 : sqftValue*3000) : sqftValue*2000;
+		
+		popupQuote.classList.add('active');
+		disableScroll();
+	});
+
+	$(".popup-quote .close-button").on('click', function() {	
+		$('.popup-quote').removeClass('active');
+		enableScroll();
+	});
+
+	// Location reload on Device-Width Change
 	var width = $(window).width();
-		$(window).resize(function() {
+	$(window).resize(function() {
 		if (width > 767 && $(window).width() < 767) {
 			location.reload();
 		}
@@ -114,12 +185,36 @@
 		}
 	})
 
+
+	// Responsive Section heading 
+	const sectionHeadings = document.querySelectorAll('.section-heading');
+	
+	if (window.matchMedia('(max-width: 992px)').matches) {
+	sectionHeadings.forEach(sectionHeading => {
+		const parentElement = sectionHeading.parentElement;
+		if (sectionHeading.classList.contains('right')) {
+			sectionHeading.classList.remove('right');
+			sectionHeading.classList.add('center');
+			parentElement.setAttribute('data-aos', 'fade-up');
+		}
+		if (sectionHeading.classList.contains('left')) {
+			sectionHeading.classList.remove('left');
+			sectionHeading.classList.add('center');
+			parentElement.setAttribute('data-aos', 'fade-up');
+		}
+
+	});
+	}
 	
 	// Menu Dropdown Toggle
 	if($('.menu-trigger').length){
 		$(".menu-trigger").on('click', function() {	
 			$(this).toggleClass('active');
 			$('.header-area .nav').slideToggle(200);
+			$(".header-area .main-nav .logo").toggleClass('hidden');
+			setTimeout(function() {
+				$(".header-area .main-nav .logo").toggleClass('d-none');
+			}, 200);
 		});
 	}
 
@@ -133,6 +228,9 @@
 				var width = $(window).width();
 				if(width < 991) {
 					$('.menu-trigger').removeClass('active');
+					setTimeout(function() {
+						$(".header-area .main-nav .logo").removeClass('hidden');
+					}, 300);
 					$('.header-area .nav').slideUp(200);	
 				}				
 				return false;

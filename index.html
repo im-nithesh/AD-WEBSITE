@@ -10,15 +10,15 @@
     <title>AD Constructions | Perfection is our Commitment</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" >
+    
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/vendor/owl/owl.css">
+    <link rel="stylesheet" href="/vendor/aos/aos.css">
+
+    <!-- Custom core CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
 
   </head>
 
@@ -36,54 +36,23 @@
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Form Popup Start ***** -->
-
-  <div class="popup-request">
-    <div class="wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row popup-area">
-              <div class="col-lg-6">
-                <img src="assets/images/experience.png" alt="">
-              </div>
-              <div class="col-lg-6">
-                <h4>Request a Call Back Now!</h4>
-                
-                <form id="contact-form" action="" method="post">
-                  <fieldset>
-                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                  </fieldset>
-                  
-                  <fieldset>
-                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                  </fieldset>
-                  
-                  <fieldset>
-                    <input type="number" name="number" id="number" placeholder="Your Mobile Number..." required="" >
-                  </fieldset>
-                  
-                  <fieldset>
-                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                  </fieldset>
-                  
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Request Call Back</button>
-                  </fieldset>
-                </form>
-              </div>
-              <button class="close-button">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   
-  <!-- ***** Form Popup End ***** -->
+  <!-- ***** Widgets Start ***** -->
+
+  <a href="https://wa.me/+919962693583" target="_blank">
+    <div class="wa-widget">
+        <div class="wa-number">
+          <strong>99626&nbsp;93583</strong>
+        </div>
+        <div class="icon-only">
+          <i class="fa-brands fa-whatsapp fa-lg"></i> 
+        </div>
+    </div>
+  </a>
+
+  <!-- ***** Widgets End ***** -->
+
+  <!-- ***** Main Banner Start ***** -->
 
   <div class="main-banner" id="section_1">
     <div class="owl-carousel owl-banner">
@@ -120,6 +89,8 @@
     </div>
   </div>
 
+  <!-- ***** Main Banner End ***** -->
+
   <!-- ***** Header Area Start ***** -->
   <header class="main header-area">
     <div class="container">
@@ -138,7 +109,6 @@
               <li class="nav-link"><a href="#section_3" class="click-scroll">Our Works</a></li>
               <li class="nav-link"><a href="#section_4" class="click-scroll">Our Team</a></li>
               <li class="nav-link"><a href="#section_5" class="click-scroll">Contact Us</a></li>
-              <li><a href="https://wa.me/+919962693583"><i class="fa-brands fa-whatsapp fa-lg"></i> 99626 93583</a></li>
             </ul>   
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -154,15 +124,15 @@
   <section class="fun-facts" id="section_2">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="center section-heading text-center">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="section-heading center text-center">
             <h2>Our Milestones</h2>
             <!-- <h6>Our achievements are counted by the number of satisfied customers we have.</h6> -->
           </div>
         </div>
         
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="counter">
               <div class="counter-icon-holder">
                 <div class="icon-wrapper">
@@ -173,7 +143,7 @@
               <h4>Active Projects</h4>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
             <div class="counter">
               <div class="counter-icon-holder">
                 <div class="icon-wrapper">
@@ -184,7 +154,7 @@
               <h4>Proficient Workers</h4>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="500">
             <div class="counter">
               <div class="counter-icon-holder">
                 <div class="icon-wrapper">
@@ -195,7 +165,7 @@
               <h4>Years of Experience</h4>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="700">
             <div class="counter">
               <div class="counter-icon-holder">
                 <div class="icon-wrapper">
@@ -211,7 +181,7 @@
     </div>
   </section>
 
-  <div class="about section">
+  <div class="about section" >
     <div class="container">
       <div class="row">
         <!-- <div class="col-lg-4">
@@ -220,29 +190,29 @@
             <a href="#"><img src="assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
           </div>
         </div> -->
-        <div class="col-lg-3">
+        <div class="col-md-3 order-3 order-lg-1">
           <div class="info-table">
             <ul>
               <li>
-                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
-                <h4>Reliability<br><span>On-Time Completion</span></h4>
+                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;" data-aos="zoom-in" data-aos-offset="-50">
+                <h4 data-aos="fade-right" data-aos-offset="-50">Reliability<br><span>On-Time Completion</span></h4>
               </li>
               <li>
-                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
-                <h4>Warranty<br><span>After Sales Services</span></h4>
+                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;" data-aos="zoom-in" data-aos-offset="-50">
+                <h4 data-aos="fade-right" data-aos-offset="-50">Warranty<br><span>After Sales Services</span></h4>
               </li>
               <li>
-                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
-                <h4>Quality<br><span>Made with Perfection</span></h4>
+                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;" data-aos="zoom-in" data-aos-offset="-50">
+                <h4 data-aos="fade-right" data-aos-offset="-50">Quality<br><span>Made with Perfection</span></h4>
               </li>
               <li>
-                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
-                <h4>Safety<br><span>Safe &amp; Secure Zone</span></h4>
+                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;" data-aos="zoom-in" data-aos-offset="-50">
+                <h4 data-aos="fade-right" data-aos-offset="-50">Safety<br><span>Safe &amp; Secure Zone</span></h4>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 col-md-9 order-2 order-lg-2" data-aos="fade-down" data-aos-offset="-50">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -299,8 +269,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="right section-heading">
+        <div class="col-lg-4 col-md-12 order-1 order-lg-3" data-aos="fade-left">
+          <div class="section-heading right">
             <h6>About Us |</h6>
             <h2>Perfection is Our Commitment</h2>
           </div>
@@ -312,8 +282,8 @@
   <section class="section works" id="section_3">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="left section-heading">
+        <div class="col-lg-4" data-aos="fade-right">
+          <div class="section-heading left">
             <h6>| Our Works</h6>
             <h2>A Glimpse of our Potential</h2>
           </div>
@@ -321,7 +291,7 @@
         <div class="col-lg-12">
           <div class="tabs-content">
             <div class="row">
-              <div class="nav-wrapper ">
+              <div class="nav-wrapper" data-aos="fade-up" data-aos-offset="-100">
                 <ul class="nav nav-tabs" role="tablist">
                   <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="ongoing-tab" data-bs-toggle="tab" data-bs-target="#ongoing" type="button" role="tab" aria-controls="ongoing" aria-selected="true">Ongoing Projects</button>
@@ -335,7 +305,7 @@
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
                   <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="item">
                         <div class="property-image">
                           <img src="assets/images/property-o-01.png" alt="">
@@ -348,11 +318,11 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                       <div class="item">
                         <div class="property-image">
                           <img src="assets/images/property-o-02.png" alt="">
-                          <span class="category">Residence</span>
+                          <span class="category">Commercial</span>
                         </div>
                         <h4>Sujith Reddy<br>VGN Brent Park, Ambattur</h4>
                         <ul>
@@ -361,12 +331,12 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-o-03.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-o-03.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Jaykumar<br>VGN Brent Park, Ambattur</h4>
                         <ul>
                           <li>Area: <span>225 m<sup>2</sup></span></li>
@@ -379,12 +349,12 @@
 
                 <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
                   <div class="row">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-c-01.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-c-01.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Vijay Villa<br>VGN Brent Park, Ambattur</h4>
                         <ul>
                           <li>Area: <span>545 m<sup>2</sup></span></li>
@@ -392,7 +362,7 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                       <div class="item">
                         <div class="property-image">
                             <img src="assets/images/property-c-02.png" alt="">
@@ -405,12 +375,12 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                       <div class="item">
                         <div class="property-image">
-                            <img src="assets/images/property-c-03.png" alt="">
-                            <span class="category">Residence</span>
-                          </div>
+                          <img src="assets/images/property-c-03.png" alt="">
+                          <span class="category">Residence</span>
+                        </div>
                         <h4>Sumathi Illam<br>Sameera Homes, Poonammali</h4>
                         <ul>
                           <li>Area: <span>225 m<sup>2</sup></span></li>
@@ -425,21 +395,23 @@
           </div>
         </div>
         <div class="row  justify-content-center">
-          <div class="col-4">
-            <div class="all-button">
-              <a href="works.html">View All</a>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+          <div class="col-lg-4 col-sm-6">
+            <a href="works.html">
+              <div class="all-button">
+                <span>View All</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="team section" id="section_4">
+  <section class="team section" id="section_4" data-aos="fade-up" data-aos-offset="300">
     <div class="container">
       <div class="row justify-content-end">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-left" data-aos-delay="500">
           <div class="section-heading right">
             <h6>Our Team |</h6>
             <h2>The Faces Behind the Success</h2>
@@ -449,7 +421,7 @@
     </div>
   </section> 
 
-  <div class="team-content">
+  <div class="team-content" data-aos="fade-up">
     <div class="container">
       <div class="row">
         <div class="team-slider owl-carousel">
@@ -580,11 +552,11 @@
     </div>
   </div>
 
-  <div class="search-form">
+  <div class="search-form" data-aos="slide-up">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <form id="search-form" name="gs" method="submit" role="search" action="#">
+          <form id="quote-search-form" name="gs" role="search">
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading text-center">
@@ -594,48 +566,31 @@
               <div class="col-lg-4">
                 <fieldset>
                   <!-- <label for="searchTitle" class="form-label">Search Work by Title</label> -->
-                  <input type="text" name="searchTitle" class="searchText" placeholder="Enter total built up area in Sqft..." autocomplete="on" required>
+                  <input name="sq-ft" type="number" class="searchText" placeholder="Enter total built up area in Sqft..." autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-4">
                 <fieldset>
-                  <!-- <label for="chooseCategory" class="form-label">Choose Category</label> -->
-                  <select name="Category" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                    <option selected>Choose category</option>
-                    <option type="checkbox" name="option1" value="Residential">Residential</option>
-                    <option value="Commercial">Commercial</option>
-                    <option value="School">School</option>
-                    <!-- <option value="Trendy Design">Trendy Design</option> -->
+                  <select name="category" class="form-select" aria-label="Select Category" required>
+                    <option name="defaultOption" value="" disabled selected>Choose category</option>
+                    <option name="option1" value="1">Residential</option>
+                    <option name="option2" value="2">Commercial</option>
+                    <option name="option3" value="3">School</option>
                   </select>
                 </fieldset>
               </div>
-              <!-- <div class="col-lg-3">
-                <fieldset>
-                  <label for="chooseprice" class="form-label">Price Range</label>
-                  <select name="Price" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                    <option selected>Choose price</option>
-                    <option value="$100 - $250">$100 - $250</option>
-                    <option value="$250 - $500">$250 - $500</option>
-                    <option value="$500 - $1000">$500 - $1000</option>
-                    <option value="$1000+">$1000+</option>
-                  </select>
-                </fieldset>
-              </div> -->
               <div class="col-lg-4">
                 <fieldset>
-                  <!-- <label for="chooseplan" class="form-label">Pick a Plan</label> -->
-                  <select name="Plan" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                    <option selected>Choose plan</option>
-                    <option value="Standard">Standard</option>
-                    <!-- <option value="Professional">Professional</option> -->
-                    <option value="Golden">Golden</option>
-                    <option value="Premium">Premium</option>
+                  <select name="plan" class="form-select" aria-label="Select Plan" required>
+                    <option name="defaultOption" value="" disabled selected>Choose plan</option>
+                    <option name="option3" value="4">Standard</option>
+                    <option name="option4" value="5">Premium</option>
                   </select>
                 </fieldset>
               </div>
               <div class="col-lg-12">                        
                 <fieldset>
-                  <button class="main-button">Search Now</button>
+                  <button type="submit" class="main-button">Search Now</button>
                 </fieldset>
               </div>
             </div>
@@ -644,11 +599,58 @@
       </div>
     </div>
   </div>
+
+  <div class="popup-quote">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="row popup-area">
+              <div class="col-lg-6">
+                <div class="quote">
+                  <img src="assets/images/quote.png" alt="">
+                  <div class="amount count-amount"></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h5>Get Started on your Dream Project!</h5>
+                
+                <form id="contact-form" action="" method="post">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="number" name="number" id="number" placeholder="Your Number..." required="" >
+                  </fieldset>
+                  
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Request a Call Back</button>
+                  </fieldset>
+                </form>
+              </div>
+              <button class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
  
-  <section class="contact section" id="section_5">
+  <section class="contact section" id="section_5" data-aos="fade-down">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300" data-aos-offset="-100">
           <div class="section-heading center text-center">
             <!-- <h6>| Contact Us</h6> -->
             <h2>Contact Us</h2>
@@ -684,9 +686,13 @@
             </div>
           </div>
         </div>
+        
         <div class="col-lg-5">
           <form id="contact-form" action="" method="post">
             <div class="row">
+              <div class="col-lg-12">
+                <h4>Request a Call Back Now!</h4>
+              </div>
               <div class="col-lg-12">
                 <fieldset>
                   <label for="name">Full Name</label>
@@ -701,14 +707,14 @@
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
+                  <label for="number">Contact Number</label>
+                  <input type="number" name="number" id="number" placeholder="Your Number..." autocomplete="on" >
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  <textarea name="message" id="message" placeholder="Your Message..."></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -723,33 +729,95 @@
     </div>
   </div>
 
+  <!-- ***** Form Popup Start ***** -->
+
+  <div class="popup-request">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row popup-area">
+              <div class="col-lg-6 col-sm-6">
+                <img src="assets/images/experience.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <h4>Request a Call Back Now!</h4>
+                
+                <form id="contact-form" action="" method="post">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="number" name="number" id="number" placeholder="Your Number..." required="" >
+                  </fieldset>
+                  
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Request Call Back</button>
+                  </fieldset>
+                </form>
+              </div>
+              <button class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ***** Form Popup End ***** -->
+
   <!-- ***** Footer Start ***** -->
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
           <div class="about-widget">
             <img src="assets/images/logo-footer.png" alt="logo">
             <p>AD Constructions is a construction company based in  Ambattur, Tamil Nadu, India. It was founded by Mr. Nethaji Kathirvel, a visionary entrepreneur who also established Aesthetic Designs, a leading architectural and interior design firm in the region.</p>
           </div>
         </div>
-        <div class="col-lg-3 ">
+        <div class="col-lg-3" data-aos="fade-right" data-aos-delay="200">
           <div class="location-widget">
             <h4>Our Location</h4>
-            <p>Plot No.88, Ground Floor,<br>Kingsland Street, VGN Brent Park,<br>Ambattur, Chennai, <br>Tamilnadu - 600058</p>
+            <a href="https://maps.app.goo.gl/dwiTQF4N6cwkTu9N6" target="_blank">
+              <p>Plot No.88, Ground Floor,<br>Kingsland Street, VGN Brent Park,<br>Ambattur, Chennai, <br>Tamilnadu - 600058</p>
+            </a>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3" data-aos="fade-right" data-aos-delay="300">
           <div class="customer-care">
-            <h4>Connect Us</h4>
+            <h4>Contact Us</h4>
             <ul class="info">
-              <li><a href="tel:+91 99626 39583">+91 99626 93583</a></li>
-              <li><a href="tel:044 2956 5866">044 - 2956 5866</a></li>
-              <li><a href="mailto:info@adconstruction.org.in">info@adconstruction.org.in</a></li>
+              <li>
+                <a href="tel:+91 99626 39583">
+                  <i class="fa-solid fa-phone"></i> +91 99626 93583
+                </a>
+              </li>
+              <li>
+                <a href="tel:044 2956 5866">
+                  <i class="fa-solid fa-tty"></i> 044 - 2956 5866
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@adconstruction.org.in">
+                  <i class="fa-solid fa-envelope"></i> info@adconstruction.org.in
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-aos="fade-right" data-aos-delay="400">
           <div class="follow-us">
             <h4>Follow Us</h4>
             <ul class="social-links">
@@ -782,8 +850,8 @@
     <div class="sub-footer">
       <div class="container">
         <div class="col-lg-12">
-          <p>Copyright &copy; 2023 AD Constructions. All rights reserved.</p>
-          <!-- <span>Design &amp; Developed by <a rel="nofollow" href="https://www.instagram.com/i.m_.nithesh.__/" target="_blank">Nithesh Mohan</a></span> -->
+          <p>Copyright &copy; 2023 |&nbsp;AD&nbsp;Constructions&nbsp;| All&nbsp;rights&nbsp;reserved</p>
+          <span>Made with &hearts; by <a rel="nofollow" href="https://www.linkedin.com/in/im-nithesh/" target="_blank">Nithesh Mohan</a></span>
         </div>
       </div>
     </div>
@@ -793,13 +861,14 @@
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/click-scroll.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/js/isotope.min.js"></script>
+  <script src="/vendor/owl/owl-carousel.js"></script>
+  <script src="/assets/js/counter.js"></script>
+  <script src="/assets/js/click-scroll.js"></script>
+  <script src="/vendor/aos/aos.js"></script>
+  <script src="/assets/js/custom.js"></script>
 
   </body>
 </html>
