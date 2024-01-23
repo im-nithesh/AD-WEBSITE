@@ -10,55 +10,55 @@
 
 	AOS.init();
 	
-	// //Smooth-Scroll
-	// let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
+	//Smooth-Scroll
+	let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
 
-	// // With this attempt I tried to make the scroll by mouse wheel look smooth
-	// let delay = ms => new Promise(res => setTimeout(res, ms));
-	// let dy = 0;
-	// window.addEventListener("wheel", async e => {
-	// 	// Prevent the default way to scroll the page
-	// 	e.preventDefault();
+	// With this attempt I tried to make the scroll by mouse wheel look smooth
+	let delay = ms => new Promise(res => setTimeout(res, ms));
+	let dy = 0;
+	window.addEventListener("wheel", async e => {
+		// Prevent the default way to scroll the page
+		e.preventDefault();
 
-	// 	dy += e.deltaY;
-	// 	let _dy = dy; // Store the value of "dy"
-	// 	await delay(50); // Wait for .05s
+		dy += e.deltaY;
+		let _dy = dy; // Store the value of "dy"
+		await delay(50); // Wait for .05s
 
-	// 	// If the value hasn't changed during the delay, then scroll to "start + dy"
-	// 	if (_dy === dy) {
-	// 		let start = window.scrollY || window.pageYOffset;
-	// 		customScrollTo(start + dy, 600, easeInOutQuint);
-	// 		dy = 0;
-	// 	}
-	// }, { passive: false });
+		// If the value hasn't changed during the delay, then scroll to "start + dy"
+		if (_dy === dy) {
+			let start = window.scrollY || window.pageYOffset;
+			customScrollTo(start + dy, 600, easeInOutQuint);
+			dy = 0;
+		}
+	}, { passive: false });
 
-	// function customScrollTo(to, duration, easingFunction) {
-	// 	let start = window.scrollY || window.pageYOffset;
-	// 	let time = Date.now();
-	// 	let timeElapsed = 0;
-	// 	let speed = (to - start) / duration;
+	function customScrollTo(to, duration, easingFunction) {
+		let start = window.scrollY || window.pageYOffset;
+		let time = Date.now();
+		let timeElapsed = 0;
+		let speed = (to - start) / duration;
 		
-	// 	(function move() {
-	// 		if (timeElapsed > duration) {
-	// 			return;
-	// 		}
-	// 		timeElapsed = Date.now() - time;
+		(function move() {
+			if (timeElapsed > duration) {
+				return;
+			}
+			timeElapsed = Date.now() - time;
 
-	// 		// Get the displacement of "y"
-	// 		let dy = speed * timeElapsed;
-	// 		let y = start + dy;
+			// Get the displacement of "y"
+			let dy = speed * timeElapsed;
+			let y = start + dy;
 
-	// 		// Map "y" into a range from 0 to 1
-	// 		let _y = (y - start) / (to - start);
-	// 		// Fit "_y" into a curve given by "easingFunction"
-	// 		_y = easingFunction(_y);
-	// 		// Expand "_y" into the original range
-	// 		y = start + (to - start) * _y;
+			// Map "y" into a range from 0 to 1
+			let _y = (y - start) / (to - start);
+			// Fit "_y" into a curve given by "easingFunction"
+			_y = easingFunction(_y);
+			// Expand "_y" into the original range
+			y = start + (to - start) * _y;
 
-	// 		window.scrollTo(0, y);
-	// 		window.requestAnimationFrame(move);
-	// 	})();
-	// }
+			window.scrollTo(0, y);
+			window.requestAnimationFrame(move);
+		})();
+	}
 
 	
 	//Scroll-Lock
@@ -122,11 +122,12 @@
 	});
       
 	//Popup Form Controls
-	setTimeout (function () {
-		$('.popup-request').addClass('active');
-		disableScroll();
-	  }, 15000);
-
+	if (window.matchMedia('(min-width: 1200px)').matches) {
+		setTimeout (function () {
+			$('.popup-request').addClass('active');
+			disableScroll();
+		}, 15000);
+	}
 	$(".popup-request .close-button").on('click', function() {	
 		$('.popup-request').removeClass('active');
 		enableScroll();
@@ -173,9 +174,9 @@
 		enableScroll();
 	});
 
-
+	// Location reload on Device-Width Change
 	var width = $(window).width();
-		$(window).resize(function() {
+	$(window).resize(function() {
 		if (width > 767 && $(window).width() < 767) {
 			location.reload();
 		}
@@ -184,12 +185,36 @@
 		}
 	})
 
+
+	// Responsive Section heading 
+	const sectionHeadings = document.querySelectorAll('.section-heading');
+	
+	if (window.matchMedia('(max-width: 992px)').matches) {
+	sectionHeadings.forEach(sectionHeading => {
+		const parentElement = sectionHeading.parentElement;
+		if (sectionHeading.classList.contains('right')) {
+			sectionHeading.classList.remove('right');
+			sectionHeading.classList.add('center');
+			parentElement.setAttribute('data-aos', 'fade-up');
+		}
+		if (sectionHeading.classList.contains('left')) {
+			sectionHeading.classList.remove('left');
+			sectionHeading.classList.add('center');
+			parentElement.setAttribute('data-aos', 'fade-up');
+		}
+
+	});
+	}
 	
 	// Menu Dropdown Toggle
 	if($('.menu-trigger').length){
 		$(".menu-trigger").on('click', function() {	
 			$(this).toggleClass('active');
 			$('.header-area .nav').slideToggle(200);
+			$(".header-area .main-nav .logo").toggleClass('hidden');
+			setTimeout(function() {
+				$(".header-area .main-nav .logo").toggleClass('d-none');
+			}, 200);
 		});
 	}
 
@@ -203,6 +228,9 @@
 				var width = $(window).width();
 				if(width < 991) {
 					$('.menu-trigger').removeClass('active');
+					setTimeout(function() {
+						$(".header-area .main-nav .logo").removeClass('hidden');
+					}, 300);
 					$('.header-area .nav').slideUp(200);	
 				}				
 				return false;
