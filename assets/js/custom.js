@@ -92,11 +92,8 @@
       dots:true,
 	  margin:30,
       responsive:{
-        992:{
+        320:{
             items:1
-        },
-		1200:{
-			items:1
 		}
       }
 	});
@@ -112,8 +109,11 @@
 			320:{
 				items:1
 			},
-			760:{
+			768:{
 				items:2
+			},
+			992:{
+				items:3
 			},
 			1200:{
 				items:4
@@ -122,7 +122,7 @@
 	});
       
 	//Popup Form Controls
-	if (window.matchMedia('(min-width: 1200px)').matches) {
+	if (window.matchMedia('(min-width: 767px)').matches) {
 		setTimeout (function () {
 			$('.popup-request').addClass('active');
 			disableScroll();
@@ -226,7 +226,7 @@
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 				var width = $(window).width();
-				if(width < 991) {
+				if(width < 767) {
 					$('.menu-trigger').removeClass('active');
 					setTimeout(function() {
 						$(".header-area .main-nav .logo").removeClass('hidden');

@@ -1354,7 +1354,6 @@ Works Style
   font-size: 18px;
   color: #ffffff;
   padding: 15px 10px;
-  width: 40%;
   margin-left: auto;
   margin-right: auto;
   transition: all 0.36s ease-in-out;
@@ -1525,7 +1524,8 @@ Contact Style
 }
 
 .contact-content #contact-form h4{
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -1537,20 +1537,20 @@ Contact Style
 
 .contact-content #contact-form input {
   width: 100%;
-  height: 44px;
-  border-radius: 22px;
+  height: 50px;
+  border-radius: 25px;
   background-color: #f6f6f6;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 14px;
   padding: 0px 15px;
 }
 
 .contact-content #contact-form textarea {
   width: 100%;
-  height: 150px;
+  height: 160px;
   max-height: 180px;
-  border-radius: 22px;
+  border-radius: 25px;
   background-color: #f6f6f6;
   border: none;
   margin-bottom: 40px;
@@ -1560,8 +1560,8 @@ Contact Style
 
 .contact-content #contact-form button {
   background-color: #1e1e1e;
-  height: 44px;
-  border-radius: 22px;
+  height: 50px;
+  border-radius: 25px;
   padding: 0px 20px;
   color: #fff;
   border: none;
@@ -2004,20 +2004,18 @@ Responsive Style
 --------------------------------------------- 
 */
 
-body {
-  overflow-x: hidden;
-}
-
-@media (max-width: 1200px) {
-  .header-area .main-nav .nav li {
-    padding-left: 5px;
-    padding-right: 5px;
+@media (min-width: 992px) {
+  footer {
+    text-align: left;
+    margin-top: 120px;
+  }
+  footer h4 {
+    margin-top: 0px;
   }
 
 }
 
-@media (max-width: 767px) {
-  
+@media (min-width: 767px){
   
 }
 
@@ -2031,20 +2029,136 @@ body {
   }
 }
 
-@media (min-width: 992px) {
-  footer {
-    text-align: left;
-    margin-top: 120px;
+@media (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
   }
-  footer h4 {
-    margin-top: 0px;
+
+  .header-area .main-nav .nav li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .about {
+    background-image: none;
+  }
+  .works .info-table ul li span {
+    float: none;
+    width: 100%;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .section{
     margin-top: 0;
   }
+  
+  .header-area{
+    height: auto;
+  }
+  .header-area .main-nav .logo{
+    width: 45%;
+  }
+  .header-area .main-nav .nav li a {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  
+  .main-banner .item h2 {
+    width: 100%;
+  }
+
+  .about{
+    padding-bottom: 0;
+  }
+  .about .section-heading {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 100px;
+  }
+  .about .accordion {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .about .info-table {
+    margin-top: 45px;
+  }
+  
+  .fun-facts .counter {
+    margin-bottom: 45px;
+  }
+
+  .works .section-heading {
+    text-align: center;
+  }
+  .works .tabs-content ul.nav-tabs {
+    margin-top: 0px;
+    justify-content: center;
+  }
+  .works .info-table {
+    margin-bottom: 45px;
+  }
+  .works .tab-content img {
+    padding: 0px;
+  }
+  .works .tabs-content h4 {
+    margin-top: 45px;
+  }
+  .works .info-table ul li span {
+    float: right !important;
+    width: auto !important;
+  }
+
+  .team-slider .card .content-bg{
+    bottom: -1px;
+  }
+
+  .contact-content .phone {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .contact-content .email {
+    margin-left: 0px;
+    margin-bottom: 45px;
+  }
+  .contact-content #contact-form {
+    margin-left: 0px;
+  }
+
+  .popup-quote .popup-area, .popup-request .popup-area{
+    transform: scale(0.8);
+    text-align: center;
+  }
+  .popup-area img{
+    margin-bottom: 20px;
+  }
+  
+}
+
+@media (min-width:767px) and (max-width:992px){
+  .about .info-table ul{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .about .info-table ul li{
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-right: 15px;
+    border-right: 1px solid #eee;
+    border-bottom: none;
+  }
+  .about .info-table ul li:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  .about .info-table ul li img{
+    float: none;
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 767px) {
   .header-area .main-nav .nav {
     height: auto;
     flex-basis: 100%;
@@ -2059,7 +2173,6 @@ body {
   }
   .header-area {
     padding: 0px 15px;
-    height: 80px;
     box-shadow: none;
     text-align: center;
     background-color: transparent;
@@ -2138,90 +2251,18 @@ body {
     height: 44px;
     line-height: 44px;
   }
-  .works .tabs-content ul.nav-tabs li {
-    margin: 0px 5px;
-  }
-  
-  .popup-request {
-    width: 200px;
-  }
-  .popup-request .popup-area{
-    text-align: center;
-  }
-  .popup-request .popup-area img{
-    width: 200px;
-  }
-
-  .contact-content #contact-form label{
-    display: none;
-  }
-}
-
-@media (max-width: 992px) {
-  .header-area .main-nav .logo h1 {
-    line-height: 100px;
-  }
-  .background-header .main-nav .logo h1 {
-    line-height: 80px;
-  }
-  .header-area .main-nav .nav li a {
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-  .main-banner .item h2 {
-    width: 100%;
-  }
-  .about .section-heading {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 100px;
-  }
-  .about .accordion {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .about .info-table {
-    margin-top: 45px;
-  }
-  .fun-facts .counter {
-    margin-bottom: 45px;
-  }
-  .works .section-heading {
-    text-align: center;
-  }
-  .works .tabs-content ul.nav-tabs {
-    margin-top: 0px;
-    justify-content: center;
-  }
-  .works .info-table {
-    margin-bottom: 45px;
-  }
-  .works .tab-content img {
-    padding: 0px;
-  }
-  .works .tabs-content h4 {
-    margin-top: 45px;
-  }
-  .contact-content .phone {
-    margin-right: 0px;
+  .works .tabs-content ul.nav-tabs{
     margin-bottom: 20px;
   }
-  .contact-content .email {
-    margin-left: 0px;
-    margin-bottom: 45px;
+  .works .tabs-content ul.nav-tabs li {
+    margin: 5px 5px;
   }
-  .contact-content #contact-form {
-    margin-left: 0px;
-  }
-  .works .info-table ul li span {
-    float: right !important;
-    width: auto !important;
-  }
-}
 
-@media (max-width: 1200px) {
-  .works .info-table ul li span {
-    float: none;
-    width: 100%;
+  .contact-content .item h6{
+    font-size: 16px;
   }
+  .contact-content #contact-form input, .contact-content #contact-form textarea {
+    margin-bottom: 20px;
+  }
+
 }
