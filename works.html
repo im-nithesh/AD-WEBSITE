@@ -36,53 +36,20 @@
   </div>
   <!-- ***** Preloader End ***** -->
 
-  <!-- ***** Form Popup Start ***** -->
+  <!-- ***** Widgets Start ***** -->
 
-  <div class="popup-request">
-    <div class="wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row popup-area">
-              <div class="col-lg-6">
-                <img src="assets/images/experience.png" alt="">
-              </div>
-              <div class="col-lg-6">
-                <h4>Request a Call Back Now!</h4>
-                
-                <form id="contact-form" action="" method="post">
-                  <fieldset>
-                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                  </fieldset>
-                  
-                  <fieldset>
-                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                  </fieldset>
-                  
-                  <fieldset>
-                    <input type="number" name="number" id="number" placeholder="Your Mobile Number..." required="" >
-                  </fieldset>
-                  
-                  <fieldset>
-                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                  </fieldset>
-                  
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Request Call Back</button>
-                  </fieldset>
-                </form>
-              </div>
-              <button class="close-button">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-          </div>
+  <a href="https://wa.me/+919962002957" target="_blank">
+    <div class="wa-widget">
+        <div class="wa-number">
+          <strong>99620&nbsp; 02957</strong>
         </div>
-      </div>
+        <div class="icon-only">
+          <i class="fa-brands fa-whatsapp fa-lg"></i> 
+        </div>
     </div>
-  </div>
-  
-  <!-- ***** Form Popup End ***** -->
+  </a>
+
+  <!-- ***** Widgets End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area background-header">
@@ -97,11 +64,10 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="nav-link"><a href="#">Home</a></li>
+              <li class="nav-link"><a href="#home">Home</a></li>
               <li class="nav-link"><a href="/#section_2">About Us</a></li>
               <li class="nav-link"><a href="/#section_4">Our Team</a></li>
               <li class="nav-link"><a href="/#section_5">Contact Us</a></li>
-              <li><a href="https://wa.me/+919962693583"><i class="fa-brands fa-whatsapp fa-lg"></i> 99626 93583</a></li>
             </ul>   
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -115,7 +81,7 @@
   <!-- ***** Header Area End ***** -->
 
   <!-- ***** Banner Start ***** -->
-  <div class="page-heading header-text">
+  <div class="page-heading header-text" id="home">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -127,7 +93,7 @@
   </div>
   <!-- ***** Banner End ***** -->
 
-  <section class="section page works" id="section_2">
+  <section class="section page works" id="section_works">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -307,32 +273,272 @@
     </div>
   </div>
 
+  <div class="search-form" data-aos="slide-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="quote-search-form" name="gs" role="search">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading text-center">
+                  <h2>Get Your Quotation Now!</h2>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <fieldset>
+                  <!-- <label for="searchTitle" class="form-label">Search Work by Title</label> -->
+                  <input name="sq-ft" type="number" class="searchText" placeholder="Enter total built up area in Sqft..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-4">
+                <fieldset>
+                  <select name="category" class="form-select" aria-label="Select Category" required>
+                    <option name="defaultOption" value="" disabled selected>Choose category</option>
+                    <option name="option1" value="1">Residential</option>
+                    <option name="option2" value="2">Commercial</option>
+                    <option name="option3" value="3">School</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col-lg-4">
+                <fieldset>
+                  <select name="plan" class="form-select" aria-label="Select Plan" required>
+                    <option name="defaultOption" value="" disabled selected>Choose plan</option>
+                    <option name="option3" value="4">Standard</option>
+                    <option name="option4" value="5">Premium</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">                        
+                <fieldset>
+                  <button type="submit" class="main-button">Search Now</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-quote">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="row popup-area justify-content-center">
+              <div class="col-lg-6">
+                <div class="quote">
+                  <img src="assets/images/quote.png" alt="">
+                  <div class="amount count-amount"></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <h5>Get Started on your Dream Project!</h5>
+                
+                <form id="contact-form" action="" method="post">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="number" name="number" id="number" placeholder="Your Number..." required="" >
+                  </fieldset>
+                  
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Request a Call Back</button>
+                  </fieldset>
+                </form>
+              </div>
+              <button class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact section" id="section_5" data-aos="fade-down">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300" data-aos-offset="-100">
+          <div class="section-heading center text-center">
+            <!-- <h6>| Contact Us</h6> -->
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="contact-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15543.985338805847!2d80.15583377018721!3d13.099418545560432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263e0c60b556d%3A0x9ec9fa553067a6b4!2sAD%20CONSTRUCTIONS!5e0!3m2!1sen!2sin!4v1703823879698!5m2!1sen!2sin" width="100%" height="500px" frameborder="0" style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);" allowfullscreen=""></iframe>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <a href="tel:+91 99620 02957">
+                <div class="item phone">
+                  <img src="assets/images/phone-icon.png" alt="" style="max-width: 46px;">
+                  <h6>+91 99620 02957<br><span>Phone Number</span></h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-7">
+              <a href="mailto:info@adconstruction.org.in">
+                <div class="item email">
+                  <img src="assets/images/email-icon.png" alt="" style="max-width: 46px;">
+                  <h6>info@adconstruction.org.in<br><span>Business Email</span></h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-5">
+          <form id="contact-form" action="" method="post">
+            <div class="row">
+              <div class="col-lg-12">
+                <h4>Request a Call Back Now!</h4>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <!-- <label for="name">Full Name</label> -->
+                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <!-- <label for="email">Email Address</label> -->
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <!-- <label for="number">Contact Number</label> -->
+                  <input type="number" name="number" id="number" placeholder="Your Number..." autocomplete="on" >
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <!-- <label for="message">Message</label> -->
+                  <textarea name="message" id="message" placeholder="Your Message..."></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12 text-center">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Popup Request Start ***** -->
+
+  <div class="popup-request">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row popup-area justify-content-center">
+              <div class="col-lg-6 col-sm-6">
+                <img src="assets/images/experience.png" alt="">
+              </div>
+              <div class="col-lg-6">
+                <h4>Request a Call Back Now!</h4>
+                
+                <form id="contact-form" action="" method="post">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                  
+                  <fieldset>
+                    <input type="number" name="number" id="number" placeholder="Your Number..." required="" >
+                  </fieldset>
+                  
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Request Call Back</button>
+                  </fieldset>
+                </form>
+              </div>
+              <button class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ***** Popup Request End ***** -->
+
+  <!-- ***** Footer Start ***** -->
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
           <div class="about-widget">
             <img src="assets/images/logo-footer.png" alt="logo">
             <p>AD Constructions is a construction company based in  Ambattur, Tamil Nadu, India. It was founded by Mr. Nethaji Kathirvel, a visionary entrepreneur who also established Aesthetic Designs, a leading architectural and interior design firm in the region.</p>
           </div>
         </div>
-        <div class="col-lg-3 ">
+        <div class="col-lg-3" data-aos="fade-right" data-aos-delay="200">
           <div class="location-widget">
             <h4>Our Location</h4>
-            <p>Plot No.88, Ground Floor,<br>Kingsland Street, VGN Brent Park,<br>Ambattur, Chennai, <br>Tamilnadu - 600058</p>
+            <a href="https://maps.app.goo.gl/dwiTQF4N6cwkTu9N6" target="_blank">
+              <p>Plot No.88, Ground Floor,<br>Kingsland Street, VGN Brent Park,<br>Ambattur, Chennai, <br>Tamilnadu - 600058</p>
+            </a>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3" data-aos="fade-right" data-aos-delay="300">
           <div class="customer-care">
-            <h4>Connect Us</h4>
+            <h4>Contact Us</h4>
             <ul class="info">
-              <li><a href="tel:+91 99626 39583">+91 99626 93583</a></li>
-              <li><a href="tel:044 2956 5866">044 - 2956 5866</a></li>
-              <li><a href="mailto:info@adconstruction.org.in">info@adconstruction.org.in</a></li>
+              <li>
+                <a href="tel:+91 99620 02957">
+                  <i class="fa-solid fa-phone"></i> +91 99620 02957
+                </a>
+              </li>
+              <li>
+                <a href="tel:044 2956 5866">
+                  <i class="fa-solid fa-tty"></i> 044 - 2956 5866
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@adconstruction.org.in">
+                  <i class="fa-solid fa-envelope"></i> info@adconstruction.org.in
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2" data-aos="fade-right" data-aos-delay="400">
           <div class="follow-us">
             <h4>Follow Us</h4>
             <ul class="social-links">
@@ -365,12 +571,13 @@
     <div class="sub-footer">
       <div class="container">
         <div class="col-lg-12">
-          <p>Copyright &copy; 2023 AD Constructions. All rights reserved.</p>
-          <!-- <span>Design &amp; Developed by <a rel="nofollow" href="https://www.instagram.com/i.m_.nithesh.__/" target="_blank">Nithesh Mohan</a></span> -->
+          <p>Copyright &copy; 2023 |&nbsp;AD&nbsp;Constructions&nbsp;| All&nbsp;rights&nbsp;reserved</p>
+          <span>Made with &hearts; by <a rel="nofollow" href="https://www.linkedin.com/in/im-nithesh/" target="_blank">Nithesh Mohan</a></span>
         </div>
       </div>
     </div>
   </footer>
+  <!-- ***** Footer End ***** -->
 
 
 
@@ -380,6 +587,7 @@
   <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="/assets/js/isotope.min.js"></script>
   <script src="/vendor/owl/owl-carousel.js"></script>
+  <script src="/assets/js/counter.js"></script>
   <script src="/vendor/aos/aos.js"></script>
   <script src="/assets/js/custom.js"></script>
   <script src="/assets/js/work-custom.js"></script>

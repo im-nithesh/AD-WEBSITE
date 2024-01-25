@@ -4,14 +4,36 @@
 	
 	// Page loading animation
 	$(window).on('load', function() {
-
-        $('#js-preloader').addClass('loaded');
+		$('#js-preloader').addClass('loaded');
     });
 
+
+	// Page loading animation
+	$(window).on('load', function() {
+		if($('.cover').length){
+			$('.cover').parallax({
+				imageSrc: $('.cover').data('image'),
+				zIndex: '1'
+			});
+		}
+
+		$("#preloader").animate({
+			'opacity': '0'
+		}, 600, function(){
+			setTimeout(function(){
+				$("#preloader").css("visibility", "hidden").fadeOut();
+			}, 300);
+		});
+	});
+
+
+	//Initializing AOS
 	AOS.init();
 	
+
 	//Smooth-Scroll
-	let easeInOutQuint = t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t; // Easing function found at https://gist.github.com/gre/1650294
+	// Easing function found at https://gist.github.com/gre/1650294
+	let easeInOutCubic = t => t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1; 
 
 	// With this attempt I tried to make the scroll by mouse wheel look smooth
 	let delay = ms => new Promise(res => setTimeout(res, ms));
@@ -22,12 +44,12 @@
 
 		dy += e.deltaY;
 		let _dy = dy; // Store the value of "dy"
-		await delay(50); // Wait for .05s
+		await delay(100); // Wait for .01s
 
 		// If the value hasn't changed during the delay, then scroll to "start + dy"
 		if (_dy === dy) {
 			let start = window.scrollY || window.pageYOffset;
-			customScrollTo(start + dy, 600, easeInOutQuint);
+			customScrollTo(start + dy, 500, easeInOutCubic);
 			dy = 0;
 		}
 	}, { passive: false });
@@ -60,18 +82,42 @@
 		})();
 	}
 
-	
-	//Scroll-Lock
-	// Disable scrolling when popup is displayed
-	function disableScroll() {
-		$('body').css('overflow', 'hidden');
-	}
-	
-	// Enable scrolling when popup is closed
-	function enableScroll() {
-		$('body').css('overflow', 'auto');
+
+	// Menu Dropdown Toggle
+	if($('.menu-trigger').length){
+		$(".menu-trigger").on('click', function() {	
+			$(this).toggleClass('active');
+			$('.header-area .nav').slideToggle(200);
+			$(".header-area .main-nav .logo").toggleClass('hidden');
+			setTimeout(function() {
+				$(".header-area .main-nav .logo").toggleClass('d-none');
+			}, 200);
+		});
 	}
 
+
+	// Menu elevator animation
+	$('.nav-link a[href*=\\#]:not([href=\\#])').on('click', function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				var width = $(window).width();
+				if(width < 767) {
+					$('.menu-trigger').removeClass('active');
+					$(".header-area .main-nav .logo").removeClass('d-none');
+					setTimeout(function() {
+						$(".header-area .main-nav .logo").removeClass('hidden');
+					}, 200);
+					$('.header-area .nav').slideUp(200);
+				}
+                target[0].scrollIntoView({ behavior: 'smooth' });
+				return false;
+
+			}
+		}
+	});
+	
 	
 	// Navbar Animation
 	window.onscroll = function() {
@@ -81,6 +127,33 @@
 	    	$("header.main").removeClass("background-header");
 	  }
 	}
+
+
+	//Manage Top margin of fun facts on scroll
+	const header = document.querySelector('.header-area');
+	const section2 = document.querySelector('#section_2');
+	
+	function updateMargin() {
+		if (header.classList.contains('background-header')) {
+		  const headerHeight = header.offsetHeight;
+		  section2.style.marginTop = `${headerHeight}px`;
+		} else {
+		  section2.style.marginTop = '0';
+		}
+	}
+	  
+	window.addEventListener('scroll', updateMargin);
+
+	//Scroll-Lock
+	// Disable scrolling when popup is displayed
+	function disableScroll() {
+		$('body').css('overflow', 'hidden');
+	}
+	// Enable scrolling when popup is closed
+	function enableScroll() {
+		$('body').css('overflow', 'auto');
+	}
+
 
 	// Main Banner Carousel
 	$('.owl-banner').owlCarousel({
@@ -97,6 +170,7 @@
 		}
       }
 	});
+
 
 	// Team Slider Carousel
 	$(".team-slider").owlCarousel({
@@ -120,8 +194,9 @@
 			}
 		  }
 	});
-      
-	//Popup Form Controls
+    
+
+	//Request Popup Controls
 	if (window.matchMedia('(min-width: 767px)').matches) {
 		setTimeout (function () {
 			$('.popup-request').addClass('active');
@@ -134,8 +209,7 @@
 	});
 
 
-	//Quote Popoup Controls
-	
+	//Quote Popup Controls
 	var form = document.getElementById('quote-search-form');
 	var popupQuote = document.querySelector('.popup-quote');
 	var sqft = document.querySelector('#quote-search-form input[type="number"]');
@@ -144,7 +218,8 @@
 	var premium = plan.querySelector('option[value="5"]');
 	window.price = 0;
 
-	//disabling premium option
+
+	//Disabling Premium Option
 	category.addEventListener('change', function() {
 		var value = this.value;
 		if (value == "2" || value == "3") {
@@ -156,7 +231,8 @@
 		plan.selectedIndex = 1;
 	});
 
-	// Code to display the popup and Price
+
+	// Code to display the Quote popup and Price
 	form.addEventListener('submit', e => {
 		e.preventDefault();
 		let sqftValue = sqft.value;
@@ -174,6 +250,7 @@
 		enableScroll();
 	});
 
+
 	// Location reload on Device-Width Change
 	var width = $(window).width();
 	$(window).resize(function() {
@@ -186,7 +263,7 @@
 	})
 
 
-	// Responsive Section heading 
+	// Responsive Section Headings
 	const sectionHeadings = document.querySelectorAll('.section-heading');
 	
 	if (window.matchMedia('(max-width: 992px)').matches) {
@@ -205,57 +282,5 @@
 
 	});
 	}
-	
-	// Menu Dropdown Toggle
-	if($('.menu-trigger').length){
-		$(".menu-trigger").on('click', function() {	
-			$(this).toggleClass('active');
-			$('.header-area .nav').slideToggle(200);
-			$(".header-area .main-nav .logo").toggleClass('hidden');
-			setTimeout(function() {
-				$(".header-area .main-nav .logo").toggleClass('d-none');
-			}, 200);
-		});
-	}
-
-
-	// Menu elevator animation
-	$('.nav-link a[href*=\\#]:not([href=\\#])').on('click', function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			if (target.length) {
-				var width = $(window).width();
-				if(width < 767) {
-					$('.menu-trigger').removeClass('active');
-					setTimeout(function() {
-						$(".header-area .main-nav .logo").removeClass('hidden');
-					}, 300);
-					$('.header-area .nav').slideUp(200);	
-				}				
-				return false;
-			}
-		}
-	});
-
-	// Page loading animation
-	$(window).on('load', function() {
-		if($('.cover').length){
-			$('.cover').parallax({
-				imageSrc: $('.cover').data('image'),
-				zIndex: '1'
-			});
-		}
-
-		$("#preloader").animate({
-			'opacity': '0'
-		}, 600, function(){
-			setTimeout(function(){
-				$("#preloader").css("visibility", "hidden").fadeOut();
-			}, 300);
-		});
-	});
-    
-
 
 })(window.jQuery);
