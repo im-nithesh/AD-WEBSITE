@@ -44,7 +44,7 @@
 
 		dy += e.deltaY;
 		let _dy = dy; // Store the value of "dy"
-		await delay(100); // Wait for .01s
+		await delay(100); // Wait for .1s
 
 		// If the value hasn't changed during the delay, then scroll to "start + dy"
 		if (_dy === dy) {
@@ -121,18 +121,17 @@
 	
 	// Navbar Animation
 	window.onscroll = function() {
-		if (window.scrollY > window.innerHeight * 0.9) {
-			$("header.main").addClass("background-header");
-	  } else {
-	    	$("header.main").removeClass("background-header");
-	  }
-	}
+		if ($(window).width() > 993) {
+		  $("header.main").toggleClass("background-header", window.scrollY > window.innerHeight * 0.9);
+		} else if ($(window).width() < 992) {
+		  $("header.main").toggleClass("background-header", window.scrollY > window.innerHeight * 0.5);
+		}
+	};
 
 
 	//Manage Top margin of fun facts on scroll
 	const header = document.querySelector('.header-area');
 	const section2 = document.querySelector('#section_2');
-	
 	function updateMargin() {
 		if (header.classList.contains('background-header')) {
 		  const headerHeight = header.offsetHeight;
@@ -141,8 +140,8 @@
 		  section2.style.marginTop = '0';
 		}
 	}
-	  
 	window.addEventListener('scroll', updateMargin);
+
 
 	//Scroll-Lock
 	// Disable scrolling when popup is displayed

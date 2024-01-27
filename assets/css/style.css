@@ -66,7 +66,7 @@ html[xmlns] .clearfix {
 
 ul, li {
   padding: 0;
-  margin: 0;
+  margin: 0; 
   list-style: none;
 }
 
@@ -83,6 +83,7 @@ html, body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a {
@@ -915,7 +916,7 @@ About Us Style
 
 .about .section-heading {
   text-align: right;
-  margin-right: -50px;
+  /* margin-right: -50px; */
 }
 
 .about .section-heading h2 {
@@ -2034,10 +2035,6 @@ Responsive Style
 }
 
 @media (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .header-area .main-nav .nav li {
     padding-left: 5px;
     padding-right: 5px;
@@ -2066,9 +2063,39 @@ Responsive Style
     padding-left: 3px;
     padding-right: 3px;
   }
-  
+  .main-banner .owl-carousel .owl-stage-outer {
+    height: 50vh;
+  }
+  .main-banner .item-1,
+  .main-banner .item-2,
+  .main-banner .item-3,
+  .main-banner .item-4,
+  .main-banner .item-5 {
+    height: 50vh;
+  }
+
   .main-banner .item h2 {
     width: 100%;
+  }
+
+  .fun-facts .aos-animate {
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
   }
 
   .about{
