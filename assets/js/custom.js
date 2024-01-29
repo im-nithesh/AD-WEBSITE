@@ -118,39 +118,40 @@
 		}
 	});
 	
-	
-	// Navbar Animation
-	window.onscroll = function() {
-		if ($(window).width() > 993) {
-		  $("header.main").toggleClass("background-header", window.scrollY > window.innerHeight * 0.9);
-		} else if ($(window).width() < 992) {
-		  $("header.main").toggleClass("background-header", window.scrollY > window.innerHeight * 0.5);
-		}
-	};
+	// Only for index.html
+	if (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("/")) {
+		// Navbar Animation
+		$(window).on('scroll', function() {
+            if ($(window).width() > 993) {
+				$("header.main").toggleClass("background-header", window.scrollY > window.innerHeight * 0.9);
+			} else if ($(window).width() < 992) {
+				$("header.main").toggleClass("background-header", window.scrollY > window.innerHeight * 0.5);
+			}
+		});
 
 
-	//Manage Top margin of fun facts on scroll
-	const header = document.querySelector('.header-area');
-	const section2 = document.querySelector('#section_2');
-	function updateMargin() {
-		if (header.classList.contains('background-header')) {
-		  const headerHeight = header.offsetHeight;
-		  section2.style.marginTop = `${headerHeight}px`;
-		} else {
-		  section2.style.marginTop = '0';
-		}
+		//Manage Top margin of fun facts on scroll
+		const header = document.querySelector('.main.header-area');
+		const section2 = document.querySelector('#section_2');
+		$(window).on('scroll', function() {
+			if (header.classList.contains('background-header')) {
+				const headerHeight = header.offsetHeight;
+				section2.style.marginTop = `${headerHeight}px`;
+			} else {
+				section2.style.marginTop = '0';
+			}
+		});
 	}
-	window.addEventListener('scroll', updateMargin);
 
 
 	//Scroll-Lock
 	// Disable scrolling when popup is displayed
 	function disableScroll() {
-		$('body').css('overflow', 'hidden');
+		$('html, body').css('overflow', 'hidden');
 	}
 	// Enable scrolling when popup is closed
 	function enableScroll() {
-		$('body').css('overflow', 'auto');
+		$('html, body').css('overflow', 'auto');
 	}
 
 

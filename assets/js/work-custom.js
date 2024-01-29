@@ -2,27 +2,6 @@
 	
 	"use strict";
 
-    //Enable or Disable Scroll-Lock
-    function disableScroll() {
-        $('body').css('overflow', 'hidden');
-    }
-    function enableScroll() {
-        $('body').css('overflow', 'auto');
-    }
-
-
-    //Request Popup Controls
-	if (window.matchMedia('(min-width: 767px)').matches) {
-		setTimeout (function () {
-			$('.popup-request').addClass('active');
-			disableScroll();
-		}, 15000);
-	}
-	$(".popup-request .close-button").on('click', function() {	
-		$('.popup-request').removeClass('active');
-		enableScroll();
-	});
-
     // Popup item Carousel
     $('.owl-popup').owlCarousel({
         startPosition: 0,

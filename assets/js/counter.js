@@ -82,95 +82,93 @@
     function formatter(value, settings) {
       return value.toFixed(settings.decimals);
     }
-    
-})(jQuery);
 
-
-// Fun Facts Timer
   $(document).ready(function() {
+    
+    // Fun Facts Timer
     var width = $(window).width();
-    if (width > 992){
-      $(window).one('scroll', function() {
-        var hT = $('#section_1').offset().top,
-            hH = $('#section_1').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        if (wS > (hT+hH-wH)){
-          jQuery(function ($) {
-            // custom formatting example
-            $(".count-number").data("countToOptions", {
-              formatter: function (value, options) {
-                return value
-                  .toFixed(options.decimals) + "+"
+    if (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("/")) {
+      if (width > 992){
+        $(window).one('scroll', function() {
+          var hT = $('#section_1').offset().top,
+              hH = $('#section_1').outerHeight(),
+              wH = $(window).height(),
+              wS = $(this).scrollTop();
+          if (wS > (hT+hH-wH)){
+            jQuery(function ($) {
+              // custom formatting example
+              $(".count-number").data("countToOptions", {
+                formatter: function (value, options) {
+                  return value
+                    .toFixed(options.decimals) + "+"
+                }
+              });
+            
+              // start all the timers
+              $(".timer").each(count);
+            
+              function count(options) {
+                var $this = $(this);
+                options = $.extend({}, options || {}, $this.data("countToOptions") || {});
+                $this.countTo(options);
               }
             });
-          
-            // start all the timers
-            $(".timer").each(count);
-          
-            function count(options) {
-              var $this = $(this);
-              options = $.extend({}, options || {}, $this.data("countToOptions") || {});
-              $this.countTo(options);
-            }
-          });
-        }
-      });
-    }
-    else {
-      jQuery(function ($) {
-        // custom formatting example
-        $(".count-number").data("countToOptions", {
-          formatter: function (value, options) {
-            return value
-              .toFixed(options.decimals) + "+"
           }
         });
-      
-        // start all the timers
-        $(".timer").each(count);
-      
-        function count(options) {
-          var $this = $(this);
-          options = $.extend({}, options || {}, $this.data("countToOptions") || {});
-          $this.countTo(options);
-        }
-      });
+      }
+      else {
+        jQuery(function ($) {
+          // custom formatting example
+          $(".count-number").data("countToOptions", {
+            formatter: function (value, options) {
+              return value
+                .toFixed(options.decimals) + "+"
+            }
+          });
+        
+          // start all the timers
+          $(".timer").each(count);
+        
+          function count(options) {
+            var $this = $(this);
+            options = $.extend({}, options || {}, $this.data("countToOptions") || {});
+            $this.countTo(options);
+          }
+        });
+      }
     }
+    // Popup Quote Timer
+
+    var form = document.getElementById('quote-search-form');
+    var popupQuote = document.querySelector('.popup-quote');
+
+    // Start Counter after Submiting Form
+    form.addEventListener('submit', () => {
+      if (popupQuote.classList.contains('active')) {
+
+        jQuery(function ($) {
+          // start all the timers
+          $(".count-amount").each(count);
+          function count(options) {
+            var $this = $(this);
+            options = $.extend({}, options || {}, $this.data("countToOptions") || {});
+            $this.countTo(options);
+          }
+
+          // custom formatting
+          $('.count-amount').countTo({
+            from: 0,
+            to: window.price,
+            speed: 2000,
+            formatter: function (value, options) {
+              return value
+                .toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ",") + "&nbsp;INR";
+            }
+          });
+
+        });
+      }
+    });
   });
 
-    
-
-// Popup Quote Timer
-
-var form = document.getElementById('quote-search-form');
-var popupQuote = document.querySelector('.popup-quote');
-
-// Start Counter after Submiting Form
-form.addEventListener('submit', () => {
-  if (popupQuote.classList.contains('active')) {
-
-    jQuery(function ($) {
-      // start all the timers
-      $(".count-amount").each(count);
-      function count(options) {
-        var $this = $(this);
-        options = $.extend({}, options || {}, $this.data("countToOptions") || {});
-        $this.countTo(options);
-      }
-
-      // custom formatting
-      $('.count-amount').countTo({
-        from: 0,
-        to: window.price,
-        speed: 2000,
-        formatter: function (value, options) {
-          return value
-            .toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ",") + "&nbsp;INR";
-        }
-      });
-
-    });
-  }
-});
-
+})(jQuery);
