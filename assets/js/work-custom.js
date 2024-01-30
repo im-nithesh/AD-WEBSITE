@@ -1,6 +1,17 @@
 (function ($) {
 	
 	"use strict";
+    
+	//Scroll-Lock
+	// Disable scrolling when popup is displayed
+    function disableScroll() {
+		$('html, body').css('overflow', 'hidden');
+	}
+	// Enable scrolling when popup is closed
+	function enableScroll() {
+		$('html, body').css('overflow', 'auto');
+	}
+
 
     // Popup item Carousel
     $('.owl-popup').owlCarousel({
