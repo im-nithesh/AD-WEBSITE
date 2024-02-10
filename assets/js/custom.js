@@ -177,7 +177,10 @@
 		loop: true,
 		autoplay: true,
 		items:4,
+		slideTransition: 'linear',
 		autoplayTimeout: 2000, //2000ms = 2s;
+		autoplaySpeed: 2000,
+		smartSpeed: 2000,
 		autoplayHoverPause: true,
 		responsive:{
 			320:{
