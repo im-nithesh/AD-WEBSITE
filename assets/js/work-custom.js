@@ -2,6 +2,25 @@
 	
 	"use strict";
     
+    const itemData = {
+        everwin: {
+            name: 'Everwin',
+            tArea: '3000 m<sup>2</sup>',
+            bArea: '2500 m<sup>2</sup>',
+            floor: '3',
+            add: 'Kolathur',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        baanu: {
+            name: 'Baanu',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Poonamalle',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        }
+    };
+
 	//Scroll-Lock
 	// Disable scrolling when popup is displayed
     function disableScroll() {
@@ -41,30 +60,17 @@
         $('.owl-carousel').trigger('to.owl.carousel', 0);
     }
 
-    //Item Popup Menu Controls
-    $("#everwin").on('click', function() {	
-        $('#everwin-popup').addClass('active');
-        disableScroll();
-        startOwlCarousel();
-    });
 
-    $("#everwin-popup .close-button").on('click', function() {	
-        $('#everwin-popup').removeClass('active');
-        enableScroll();
-        stopOwlCarousel();
-    });
-
-
-    // Works Flip Card
+    // Completed Works Item Flip Card
     // Select all the flip buttons
     var flipButtons = document.querySelectorAll (".flip-btn");
 
     // Loop through each button and add a click event listener
-    flipButtons.forEach (function (button) {
-    button.addEventListener ("click", function () {
+    flipButtons.forEach (function (flip_button) {
+    flip_button.addEventListener ("click", function () {
         
         // Find the parent item element
-        var item = button.closest (".item");
+        var item = flip_button.closest (".item");
 
         // Find the front and back images
         var front = item.querySelector (".front");
@@ -75,6 +81,42 @@
         back.classList.toggle ("flipped");
     });
     });
+
+
+    //Ongoing Works Item Popup Menu Controls
+    var items = document.querySelectorAll ("#ongoing .item");
+
+    // Loop through each button and add a click event listener
+    items.forEach (function (item_button) {
+        item_button.addEventListener ("click", function () {
+            // Find the item id
+            var item_id = item_button.id;
+
+            if (item_id in itemData) {
+                const data = itemData[item_id];
+                $('.popup-works .name').text(data.name);
+                $('.popup-works .t-area').html(data.tArea);
+                $('.popup-works .b-area').html(data.bArea);
+                $('.popup-works .floor').text(data.floor);
+                $('.popup-works .add').text(data.add);
+                $('.popup-works .more-info').text(data.moreInfo);
+            }
+                        
+            $('#projects-popup').addClass('active '+ item_id);
+            disableScroll();
+            startOwlCarousel();
+        });
+    });
+
+    // Closing Item pop-up
+    $("#projects-popup .close-button").on('click', function() {	
+        $('#projects-popup').removeClass().addClass("popup-works");
+        enableScroll();
+        stopOwlCarousel();
+    });
+
+
+    
 
 
 })(window.jQuery);

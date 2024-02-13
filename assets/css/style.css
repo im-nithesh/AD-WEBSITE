@@ -1456,28 +1456,24 @@ Contact Style
 }
 
 .contact-content .item {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   padding: 30px 0;
   background-color: #fff;
   transition: all 0.36s ease-in-out;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  place-items: center;
 }
 
 .contact-content .item:hover {
   transform: scale(1.1);
 }
 
-.contact-content .phone {
-  margin-right: 5px;
-}
-
-.contact-content .email {
-  margin-left: 5px;
+.contact-content .phone, .contact-content .email {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
 }
 
 .contact-content .item img {
@@ -1985,22 +1981,19 @@ Popup Works Style
 Popup Works Images
 --------------------------------------------- 
 */
-
-#everwin-popup .item-1 {
+.everwin .item-1 {
   background-image: url(../images/banner-01.png);
 }
-
-#everwin-popup .item-2 {
+.everwin .item-2 {
   background-image: url(../images/banner-02.png);
 }
-
-#everwin-popup .item-3 {
+.everwin .item-3 {
   background-image: url(../images/banner-03.png);
 }
-
-#everwin-popup .item-4 {
+.everwin .item-4 {
   background-image: url(../images/banner-04.png);
 }
+
 
 
 /* 
@@ -2045,6 +2038,13 @@ Responsive Style
   .works .info-table ul li span {
     float: none;
     width: 100%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 767px) {
+  .contact-content .phone, .contact-content .email {
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -2143,14 +2143,12 @@ Responsive Style
     bottom: -1px;
   }
 
-  .contact-content .phone {
+  .contact-content .item:first-child {
     margin-right: 0px;
-    margin-bottom: 20px;
-  }
-  .contact-content .email {
     margin-left: 0px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
+  
   .contact-content #contact-form {
     margin-left: 0px;
   }
@@ -2290,7 +2288,10 @@ Responsive Style
   .works .tabs-content ul.nav-tabs li {
     margin: 5px 5px;
   }
-
+  .contact-content .item {
+    padding-left: 20px;
+    place-items: start;
+  }
   .contact-content .item h6{
     font-size: 16px;
   }
