@@ -3,8 +3,8 @@
 	"use strict";
     
     const itemData = {
-        everwin: {
-            name: 'Everwin',
+        everwin_kids: {
+            name: 'Everwin Kids School',
             tArea: '3000 m<sup>2</sup>',
             bArea: '2500 m<sup>2</sup>',
             floor: '3',
@@ -12,13 +12,61 @@
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
         baanu: {
-            name: 'Baanu',
+            name: 'Mrs. Baanu',
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
             floor: '2',
             add: 'Poonamalle',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
-        }
+        },
+        daniel: {
+            name: 'Mr. Daniel',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Poonamalle',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        everwin_mvoyal: {
+            name: 'Everwin School',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Mdhuravoyal',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        vivekanandha: {
+            name: 'Vivekanandha Vidhyalaya',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Madhurandhagam',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        jayakumar: {
+            name: 'Mr. Jayakumar',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Ambattur',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        ulaganadhan: {
+            name: 'Mr. Ulaganadhan Illam',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Korattur',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        bhaskaran: {
+            name: 'Mr. Bhaskaran Home',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Poonamalle',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
     };
 
 	//Scroll-Lock
@@ -33,22 +81,14 @@
 
 
     // Popup item Carousel
-    $('.owl-popup').owlCarousel({
-        startPosition: 0,
-        center: true,
-        items:1,
-        loop:true,
-        nav:true,
-        navText: ['<i class="fa-solid fa-angle-left" aria-hidden="true"></i>','<i class="fa-solid fa-angle-right" aria-hidden="true"></i>'],
-        margin:30,
-        responsive:{
-        992:{
-            items:1
-        },
-        1200:{
-            items:1
-        }
-        }
+    $(document).ready(function() {
+        $('.owl-popup').owlCarousel({
+            startPosition: 0,
+            items: 1,
+            loop: true,
+            nav: true,
+            navText: ['<i class="fa-solid fa-angle-left" aria-hidden="true"></i>','<i class="fa-solid fa-angle-right" aria-hidden="true"></i>']
+        });
     });
 
     function startOwlCarousel() {

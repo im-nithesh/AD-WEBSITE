@@ -1890,9 +1890,12 @@ Popup Works Style
 .popup-works .popup-content{
   position: relative;
 }
+.popup-works .owl-carousel {
+  overflow: hidden;
+}
 
 .popup-works .info-table ul li {
-  display: block;
+  display: flex;
   margin-bottom: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #eee;
@@ -1900,6 +1903,7 @@ Popup Works Style
   font-size: 15px;
   color: #aaa;
   font-weight: 400;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -1926,7 +1930,7 @@ Popup Works Style
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 200px 20%;
+  padding: 200px 300px;
   border-radius: 10px;
 }
 
@@ -1981,20 +1985,18 @@ Popup Works Style
 Popup Works Images
 --------------------------------------------- 
 */
-.everwin .item-1 {
+.popup-works .item-1 {
   background-image: url(../images/banner-01.png);
 }
-.everwin .item-2 {
+.popup-works .item-2 {
   background-image: url(../images/banner-02.png);
 }
-.everwin .item-3 {
+.popup-works .item-3 {
   background-image: url(../images/banner-03.png);
 }
-.everwin .item-4 {
+.popup-works .item-4 {
   background-image: url(../images/banner-04.png);
 }
-
-
 
 /* 
 ---------------------------------------------
