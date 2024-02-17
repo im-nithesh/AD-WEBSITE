@@ -27,7 +27,7 @@
             add: 'Poonamalle',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
-        everwin_mvoyal: {
+        everwin_mathur: {
             name: 'Everwin School',
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
@@ -129,9 +129,10 @@
     // Loop through each button and add a click event listener
     items.forEach (function (item_button) {
         item_button.addEventListener ("click", function () {
+            
             // Find the item id
             var item_id = item_button.id;
-
+            
             if (item_id in itemData) {
                 const data = itemData[item_id];
                 $('.popup-works .name').text(data.name);
@@ -140,8 +141,12 @@
                 $('.popup-works .floor').text(data.floor);
                 $('.popup-works .add').text(data.add);
                 $('.popup-works .more-info').text(data.moreInfo);
+                $('.popup-works .item-1').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-01.png)');
+                $('.popup-works .item-2').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-02.png)');
+                $('.popup-works .item-3').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-03.png)');
+                $('.popup-works .item-4').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-04.png)');
             }
-                        
+
             $('#projects-popup').addClass('active '+ item_id);
             disableScroll();
             startOwlCarousel();
@@ -154,9 +159,5 @@
         enableScroll();
         stopOwlCarousel();
     });
-
-
-    
-
 
 })(window.jQuery);

@@ -1982,24 +1982,6 @@ Popup Works Style
 
 /* 
 ---------------------------------------------
-Popup Works Images
---------------------------------------------- 
-*/
-.popup-works .item-1 {
-  background-image: url(../images/banner-01.png);
-}
-.popup-works .item-2 {
-  background-image: url(../images/banner-02.png);
-}
-.popup-works .item-3 {
-  background-image: url(../images/banner-03.png);
-}
-.popup-works .item-4 {
-  background-image: url(../images/banner-04.png);
-}
-
-/* 
----------------------------------------------
 Responsive Style
 --------------------------------------------- 
 */
