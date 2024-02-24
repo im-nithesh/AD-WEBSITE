@@ -142,7 +142,7 @@ function sendContact() {
                                                                             <tr> \
                                                                                 <td class="pad" style="width:100%;"> \
                                                                                     <div class="alignment" align="center" style="line-height:10px"> \
-                                                                                        <div style="max-width: 300px;"><a href="https://adconstruction.org.in/" data-saferedirecturl="https://www.google.com/url?q=https://adconstruction.org.in/" target="_blank" style="outline:none" tabindex="-1"><img src="https://adconstruction.org.in/assets/images/logo-header.png" width="300px" style="display: block; height: auto; border: 0; width: 100%;" alt="logo-image" title="ADC-logo"></a></div> \
+                                                                                        <div style="max-width: 300px;"><a href="https://adconstruction.org.in/" data-saferedirecturl="https://www.google.com/url?q=https://adconstruction.org.in/" target="_blank" style="outline:none" tabindex="-1"><img src="https://adconstruction.org.in/assets/images/logo-header.png" width="300px" style="display: block; height: auto; border: 0; width: 100%;" alt="AD Construction Logo" title="ADC-logo"></a></div> \
                                                                                     </div> \
                                                                                 </td> \
                                                                             </tr> \
@@ -152,14 +152,14 @@ function sendContact() {
                                                                         <table class="heading_block block-5" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> \
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-top:10px;text-align:center;width:100%;"> \
-                                                                                    <h1 style="margin: 0; color: #2c2b2b; direction: ltr; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; font-size: 38px; font-weight: 700; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 57px;"><span class="tinyMce-placeholder">THANK YOU!</span></h1> \
+                                                                                    <h1 style="margin: 0; color: #2c2b2b; direction: ltr; font-family: \'Montserrat\', sans-serif; font-size: 38px; font-weight: 700; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 57px;"><span class="tinyMce-placeholder">THANK YOU!</span></h1> \
                                                                                 </td> \
                                                                             </tr> \
                                                                         </table> \
                                                                         <table class="heading_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> \
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:10px;text-align:center;width:100%;"> \
-                                                                                    <h2 style="margin: 0; color: #454545; direction: ltr; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">FOR GETTING IN TOUCH WITH US!</span></h2> \
+                                                                                    <h2 style="margin: 0; color: #454545; direction: ltr; font-family: \'Montserrat\', sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">FOR GETTING IN TOUCH WITH US!</span></h2> \
                                                                                 </td> \
                                                                             </tr> \
                                                                         </table> \
@@ -180,7 +180,7 @@ function sendContact() {
                                                                         <table class="paragraph_block block-9" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"> \
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:15px;padding-top:10px;"> \
-                                                                                    <div style="color:#454545;direction:ltr;font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;font-weight:300;letter-spacing:0px;line-height:150%;text-align:center;mso-line-height-alt:21px;"> \
+                                                                                    <div style="color:#454545; direction:ltr; font-family: \'Open Sans\', sans-serif; font-size:14px; font-weight:300; letter-spacing:0px; line-height:150%; text-align:center; mso-line-height-alt:21px;"> \
                                                                                         <p style="margin: 0; margin-bottom: 16px;">We appreciate your interest in our services.<br>Our team has received your inquiry, and we&#39;re here to assist you.</p> \
                                                                                         <p style="margin: 0;">We will review your message and get back to you promptly.<br>If you have any urgent matters, please feel free to call us directly at <a href="tel:+919962002957" target="_blank" style="text-decoration: none; color:#454545;">+91&nbsp;99620&nbsp;02957</a><br><br>Thank you for considering AD Construction for your construction needs.<br>We look forward to assisting you!<br><br>Best regards,<br>AD CONSTRUCTIONS</p> \
                                                                                     </div> \
@@ -238,7 +238,7 @@ function sendContact() {
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:5px;"> \
                                                                                     <div style="font-family: "Trebuchet MS", Tahoma, sans-serif"> \
-                                                                                        <div class="" style="font-size: 12px; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
+                                                                                        <div class="" style="font-size: 12px; font-family: \'Montserrat\', sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
                                                                                             <p style="margin: 0; font-size: 18px; text-align: left; mso-line-height-alt: 21.599999999999998px;"><strong><span style="font-size:14px;color:#000000;"><span style="">Social media</span></span></strong></p> \
                                                                                         </div> \
                                                                                     </div> \
@@ -278,7 +278,7 @@ function sendContact() {
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:5px;"> \
                                                                                     <div style="font-family: "Trebuchet MS", Tahoma, sans-serif"> \
-                                                                                        <div class="" style="font-size: 12px; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
+                                                                                        <div class="" style="font-size: 12px; font-family: \'Montserrat\', sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
                                                                                             <p style="margin: 0; font-size: 18px; text-align: left; mso-line-height-alt: 21.599999999999998px;"><span style="font-size:14px;color:#000000;"><strong><span style="">Where to find us</span></strong></span></p> \
                                                                                         </div> \
                                                                                     </div> \
@@ -455,14 +455,14 @@ function sendContact() {
                                                                         <table class="heading_block block-5" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> \
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-top:10px;text-align:center;width:100%;"> \
-                                                                                <h1 style="margin: 0; color: #2c2b2b; direction: ltr; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; font-size: 38px; font-weight: 700; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 57px;"><span class="tinyMce-placeholder">NEW CONTACT INQUIRY!</span></h1> \
+                                                                                <h1 style="margin: 0; color: #2c2b2b; direction: ltr; font-family: \'Montserrat\', sans-serif; font-size: 38px; font-weight: 700; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 57px;"><span class="tinyMce-placeholder">NEW CONTACT INQUIRY!</span></h1> \
                                                                                 </td> \
                                                                             </tr> \
                                                                         </table> \
                                                                         <table class="heading_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> \
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:10px;text-align:center;width:100%;"> \
-                                                                                <h2 style="margin: 0; color: #454545; direction: ltr; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">FOR AD CONSTRUCTION!</span></h2> \
+                                                                                <h2 style="margin: 0; color: #454545; direction: ltr; font-family: \'Montserrat\', sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">FOR AD CONSTRUCTION!</span></h2> \
                                                                                 </td> \
                                                                             </tr> \
                                                                         </table> \
@@ -492,28 +492,28 @@ function sendContact() {
                                                                         <table class="heading_block block-10" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">  \
                                                                             <tr>  \
                                                                                 <td class="pad" style="padding-top:10px;text-align:center;width:100%;">  \
-                                                                                    <h1 style="margin: 0; color: #2c2b2b; direction: ltr; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: normal; line-height: 100%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 57px;"><span class="tinyMce-placeholder">CLIENT DETAILS</span></h1>  \
+                                                                                    <h1 style="margin: 0; color: #2c2b2b; direction: ltr; font-family: \'Montserrat\', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: normal; line-height: 100%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 57px;"><span class="tinyMce-placeholder">CLIENT DETAILS</span></h1>  \
                                                                                 </td>  \
                                                                             </tr>  \
                                                                         </table>  \
                                                                         <table class="data_block block-11" style="padding: 20px 80px; margin: 0 auto;" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">  \
                                                                             <tr style="justify-content: center; margin: 0 auto; max-width: 80%;">  \
-                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;"> Name </td> \
+                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family: \'Open Sans\', sans-serif;"> Name </td> \
                                                                                 <td style="width:10%; text-align: center;"> : </td>  \
                                                                                 <td style="width:40%; font-size:14px; line-height:30px; font-weight:600; color: #000;"> '+ formData.get('name').toString() +' </td>  \
                                                                             </tr>  \
                                                                             <tr style="justify-content: center; margin: 0 auto; max-width: 80%;">  \
-                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;"> Email </td> \
+                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family: \'Open Sans\', sans-serif;"> Email </td> \
                                                                                 <td style="width:10%; text-align: center;"> : </td> \
                                                                                 <td style="width:40%; font-size:14px; line-height:30px; font-weight:600; color: #000;"> '+ formData.get('email').toString() +' </td> \
                                                                             </tr> \
                                                                             <tr style="justify-content: center; margin: 0 auto; max-width: 80%;"> \
-                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;"> Contact Number </td> \
+                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family: \'Open Sans\', sans-serif;"> Contact Number </td> \
                                                                                 <td style="width:10%; text-align: center;"> : </td> \
                                                                                 <td style="width:40%; font-size:14px; line-height:30px; font-weight:600; color: #000;"> '+ formData.get('number').toString() +' </td> \
                                                                             </tr> \
                                                                             <tr style="justify-content: center; margin: 0 auto; max-width: 80%;"> \
-                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;"> Message  </td> \
+                                                                                <td style="width:40%; font-size:14px; line-height:30px; font-family: \'Open Sans\', sans-serif;"> Message  </td> \
                                                                                 <td style="width:10%; text-align: center;"> : </td> \
                                                                                 <td style="width:40%; font-size:14px; line-height:30px; font-weight:600; color: #000;"> '+ formData.get('message').toString() +' </td> \
                                                                             </tr> \
@@ -568,7 +568,7 @@ function sendContact() {
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:5px;"> \
                                                                                     <div style="font-family: "Trebuchet MS", Tahoma, sans-serif"> \
-                                                                                        <div class="" style="font-size: 12px; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
+                                                                                        <div class="" style="font-size: 12px; font-family: \'Montserrat\', sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
                                                                                             <p style="margin: 0; font-size: 18px; text-align: left; mso-line-height-alt: 21.599999999999998px;"><strong><span style="font-size:14px;color:#000000;"><span style="">Social media</span></span></strong></p> \
                                                                                         </div> \
                                                                                     </div> \
@@ -608,7 +608,7 @@ function sendContact() {
                                                                             <tr> \
                                                                                 <td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:5px;"> \
                                                                                     <div style="font-family: "Trebuchet MS", Tahoma, sans-serif"> \
-                                                                                        <div class="" style="font-size: 12px; font-family: "\'Montserrat\'", "\'Trebuchet MS\'", "\'Lucida Grande\'", "\'Lucida Sans Unicode\'", "\'Lucida Sans\'", Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
+                                                                                        <div class="" style="font-size: 12px; font-family: \'Montserrat\', sans-serif; mso-line-height-alt: 14.399999999999999px; color: #ffffff; line-height: 1.2;"> \
                                                                                             <p style="margin: 0; font-size: 18px; text-align: left; mso-line-height-alt: 21.599999999999998px;"><span style="font-size:14px;color:#000000;"><strong><span style="">Where to find us</span></strong></span></p> \
                                                                                         </div> \
                                                                                     </div> \
