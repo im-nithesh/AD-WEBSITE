@@ -32,7 +32,7 @@
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
             floor: '2',
-            add: 'Mdhuravoyal',
+            add: 'Madhuravoyal',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
         vivekanandha: {
@@ -51,12 +51,12 @@
             add: 'Ambattur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
-        ulaganadhan: {
-            name: 'Mr. Ulaganadhan Illam',
-            tArea: '1000 m<sup>2</sup>',
-            bArea: '700 m<sup>2</sup>',
+        anandh: {
+            name: 'Mr. Anandh',
+            tArea: '600 m<sup>2</sup>',
+            bArea: '545 m<sup>2</sup>',
             floor: '2',
-            add: 'Korattur',
+            add: 'VGN Brent Park, Ambattur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
         bhaskaran: {

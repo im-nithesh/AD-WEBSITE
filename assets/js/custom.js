@@ -253,6 +253,10 @@
 		enableScroll();
 	});
 
+	$(".success-message .close-button, .error-message .close-button").on('click', function() {
+		$(".success-message, .error-message").removeClass('active');
+	});
+
 
 	// Location reload on Device-Width Change
 	var width = $(window).width();
