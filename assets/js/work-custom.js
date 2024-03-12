@@ -11,28 +11,12 @@
             add: 'Kolathur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
-        baanu: {
-            name: 'Mrs. Baanu',
-            tArea: '1000 m<sup>2</sup>',
-            bArea: '700 m<sup>2</sup>',
-            floor: '2',
-            add: 'Poonamalle',
-            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
-        },
-        daniel: {
-            name: 'Mr. Daniel',
-            tArea: '1000 m<sup>2</sup>',
-            bArea: '700 m<sup>2</sup>',
-            floor: '2',
-            add: 'Poonamalle',
-            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
-        },
         everwin_mathur: {
-            name: 'Everwin School',
+            name: 'Everwin CBSE School',
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
             floor: '2',
-            add: 'Madhuravoyal',
+            add: 'Mathur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
         vivekanandha: {
@@ -40,31 +24,79 @@
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
             floor: '2',
-            add: 'Madhurandhagam',
+            add: 'Maduranthakam',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
-        jayakumar: {
-            name: 'Mr. Jayakumar',
+        rizvena_sameera: {
+            name: 'Mrs. Rizvena',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Poonamalle',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        daniel_newry: {
+            name: 'Mr. Daniel John',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Poonamalle',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        sumathi_vgn: {
+            name: 'Mrs. Sumathi',
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
             floor: '2',
             add: 'Ambattur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
-        anandh: {
-            name: 'Mr. Anandh',
+        anand_vgn: {
+            name: 'Mr. Anand',
             tArea: '600 m<sup>2</sup>',
             bArea: '545 m<sup>2</sup>',
             floor: '2',
-            add: 'VGN Brent Park, Ambattur',
+            add: 'Ambattur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
-        bhaskaran: {
-            name: 'Mr. Bhaskaran Home',
+        baskar_sameera: {
+            name: 'Mr. Baskar',
             tArea: '1000 m<sup>2</sup>',
             bArea: '700 m<sup>2</sup>',
             floor: '2',
             add: 'Poonamalle',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        sujith_vgn: {
+            name: 'Mr. Sujith Reddy',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Ambattur',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        sathish_vgn: {
+            name: 'Mr. Sathish Kumar',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Ambattur',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        srinivas_madipakkam: {
+            name: 'Mr. Srinivas',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Madipakkam',
+            moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
+        },
+        karthickn_vgn: {
+            name: 'Mr. Karthick Narayanan',
+            tArea: '1000 m<sup>2</sup>',
+            bArea: '700 m<sup>2</sup>',
+            floor: '2',
+            add: 'Ambattur',
             moreInfo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.'
         },
     };
