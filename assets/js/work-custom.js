@@ -173,10 +173,10 @@
                 $('.popup-works .floor').text(data.floor);
                 $('.popup-works .add').text(data.add);
                 $('.popup-works .more-info').text(data.moreInfo);
-                $('.popup-works .item-1').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-01.png)');
-                $('.popup-works .item-2').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-02.png)');
-                $('.popup-works .item-3').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-03.png)');
-                $('.popup-works .item-4').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-04.png)');
+                $('.popup-works .item-1').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-01.jpg)');
+                $('.popup-works .item-2').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-02.jpg)');
+                $('.popup-works .item-3').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-03.jpg)');
+                $('.popup-works .item-4').css('background-image', 'url(../assets/images/projects/ongoing/' + item_id + '/item-04.jpg)');
             }
 
             $('#projects-popup').addClass('active '+ item_id);
